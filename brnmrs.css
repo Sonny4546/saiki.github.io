@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+#bgvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 50%;
+}
+
+.wrapper {
+    position: absolute;
+    margin: auto;
+    top: 8cm;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    font-size: 100px;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nav {
+    position: absolute;
+    top: 15cm;
+    width: 100%;
+    overflow: hidden;   
+    height: 963px;
+}
+
+.nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    width: 22%;
+    font-size: 35px;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    text-decoration: none;
+    opacity: 100%;
+  }
+  
+  .nav a:hover {
+    color: #987045;
+}
