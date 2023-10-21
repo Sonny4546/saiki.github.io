@@ -15,9 +15,46 @@ body::-webkit-scrollbar {
     position: fixed;
     right: 0;
     bottom: 0;
+    width: auto;
+    height: auto;
     min-width: 100%;
     min-height: 100%;
-    opacity: 50%;
+    opacity: 25%;
+    z-index: -1;
+}
+
+.spkrbtn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+    padding: 0;
+    border: none;
+    background: none;
+    animation: fadeOutbtn 20s linear 0s 1 normal forwards;
+    cursor: pointer;
+}
+
+.spkr {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 4;
+    animation: fadeOutbtn 20s linear 0s 1 normal forwards;
+}
+
+.note {
+    position: relative;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    font-size: 25px;
+    left: 60px;
+    z-index: 5;
+    margin: 0px;
+    top: 10px;
+    animation: fadeInOut 10s linear 0s 1 normal forwards;
+    cursor: default;
+    user-select: none;
 }
 
 .wrapper {
@@ -27,19 +64,18 @@ body::-webkit-scrollbar {
     min-width: 100%;
     min-height: 100%;
     overflow: hidden;
+    z-index: 3;
 }
 
 .title {
+    position: relative;
     text-align: center;
     color: #ca975f;
     font-family: 'Bebas Neue Pro';
     font-size: 100px;
-    animation: fadeIn 5s;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    animation: fadeInTitle 5s;
+    user-select: none;
+    cursor: default;
 }
 
 .nav {
@@ -48,21 +84,92 @@ body::-webkit-scrollbar {
     width: 100%;
     overflow: hidden;   
     height: 963px;
+    animation: fadeIn 2s;
+    z-index: 2;
 }
 
 .nav a {
     float: left;
     color: white;
     text-align: center;
-    padding: 12px;
-    width: 22%;
+    width: 25%;
     font-size: 35px;
     color: #ca975f;
     font-family: 'Bebas Neue Pro';
     text-decoration: none;
     opacity: 100%;
-  }
+    user-select: none;
+    -webkit-user-drag: none;
+}
   
-  .nav a:hover {
+.nav a:hover {
     color: #987045;
+}
+
+.nav a.active {
+    color: bisque;
+    background-color: #987045;
+    cursor: default;
+}
+
+.contentdiv {
+    position: relative;
+    z-index: 1;
+    height: 250px;
+}
+
+.coverimg {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 350px;
+    height: 350px;
+    z-index: 2;
+}
+
+.home {
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInTitle {
+    0% { 
+        opacity: 0; 
+        top: 2cm;
+    }
+    100% { 
+        opacity: 1; 
+        top: 0cm;
+    }
+}
+
+@keyframes fadeInOut {
+	0%,
+	50%,
+	100% {
+		opacity: 0;
+	}
+
+	25%,
+	75% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOutbtn {
+    0% {opacity: 0;}
+    25% {opacity: 1;}
+    75% {opacity: 1;}
+    100% {opacity: 0;}
 }
