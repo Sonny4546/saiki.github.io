@@ -9,13 +9,31 @@
         <link rel="icon" type="image/x-icon" href="https://sonny4546.github.io/OurFavoriteArtist/images/favicon.ico">
         <link rel="stylesheet" href="https://sonny4546.github.io/OurFavoriteArtist/brnmrs.css">
     </head>
-    <script defer src="https://sonny4546.github.io/OurFavoriteArtist/brn.js"></script>
+    <script defer src="brn.js"></script>
     <body>
-        <div class="nav" style="top: 0cm;">
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a class="active" href="javascript:void(0)">History</a>
-            <a href="Discography.html">Discography</a>
+        <div>
+            <button class="spkrbtn" onclick="disableMute()" type="button"></button>
+            <img class="spkr" src="https://sonny4546.github.io/OurFavoriteArtist/images/spkr.png">
+            <p class="note">Click the speaker button for sound!</p>
+        </div>
+        <div>
+            <video autoplay muted loop id="bgvideo">
+                <source src="https://sonny4546.github.io/OurFavoriteArtist/vid/bg.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="wrapper">
+            <h1 class="title">
+            AN EVENING WITH BRUNO MARS
+            </h1>
+            <div id="section2" class="nav">
+                <a href="index.html">Home</a>
+                <a href="About.html#section2">About</a>
+                <a class="active" href="javascript:void(0)">History</a>
+                <a href="Discography.html#section2">Discography</a>
+            </div>
+            <div class="contentdiv" style="height: 1100px; top: 500px; background: rgb(0,0,0);">
+                <div class="contentdiv" style="top: -140px; background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 81%, rgba(255,255,255,0) 100%);"></div>
+            </div>
         </div>
     </body>
 </html>

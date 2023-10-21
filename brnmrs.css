@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial;
@@ -75,7 +79,6 @@ body::-webkit-scrollbar {
     top: 8cm;
     min-width: 100%;
     min-height: 100%;
-    overflow: hidden;
     z-index: 3;
 }
 
@@ -88,6 +91,7 @@ body::-webkit-scrollbar {
     animation: fadeInTitle 5s;
     user-select: none;
     cursor: default;
+    margin: 0px;
 }
 
 .nav {
@@ -135,19 +139,38 @@ body::-webkit-scrollbar {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    top: -240px;
     width: 50%;
     width: 350px;
     height: 350px;
     z-index: 2;
+    animation: fadeInContent 2s;
 }
 
 .home {
     position: relative;
     font-size: 40px;
+    top: -240px;
     text-align: center;
     color: #ca975f;
     font-family: 'Bebas Neue Pro';
     z-index: 2;
+    margin: 0px;
+    animation: fadeInContent 2s;
+}
+
+.about {
+    position: relative;
+    font-size: 30px;
+    top: -240px;
+    margin: 10px;
+    text-indent: 50px;
+    text-align: center;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    z-index: 2;
+    animation: fadeInContent 2s;
+    text-align: justify;
 }
 
 @keyframes fadeIn {
@@ -163,6 +186,17 @@ body::-webkit-scrollbar {
     100% { 
         opacity: 1; 
         top: 0cm;
+    }
+}
+
+@keyframes fadeInContent {
+    0% { 
+        opacity: 0; 
+        top: -190px;
+    }
+    100% { 
+        opacity: 1; 
+        top: -240px;
     }
 }
 
@@ -187,7 +221,7 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
-    font-family: Bebas Neue Pro;
+    font-family: BebasNeuePro;
     src: url(https://sonny4546.github.io/OurFavoriteArtist/font/BebasNeuePro-Regular.ttf) format('truetype');
     font-style: normal;
 }
