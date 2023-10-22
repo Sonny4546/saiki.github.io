@@ -1,5 +1,5 @@
 let vid = document.getElementById("bgvideo");
 
-function disableMute() { 
-    vid.muted = false;
+function AudioToggle() { 
+    vid.muted = !vid.muted;
   } 

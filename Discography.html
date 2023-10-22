@@ -1,8 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: https://ogp.me/ns#">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="An Evening with Bruno Mars">
+        <meta name="twitter:description" content="Our Favorite Artist Project">
+        <meta name="twitter:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
+        <meta name="twitter:url" content="https://sonny4546.github.io/OurFavoriteArtist/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="An Evening with Bruno Mars">
+        <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
+        <meta property="og:url" content="https://sonny4546.github.io/OurFavoriteArtist/">
+        <meta property="og:description" content="Our Favorite Artist Project">
         <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>An Evening with Bruno Mars</title>
@@ -12,7 +22,7 @@
     <script defer src="brn.js"></script>
     <body>
         <div>
-            <button class="spkrbtn" onclick="disableMute()" type="button"></button>
+            <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
             <img class="spkr" src="https://sonny4546.github.io/OurFavoriteArtist/images/spkr.png">
             <p class="note">Click the speaker button for sound!</p>
         </div>
@@ -22,14 +32,19 @@
             </video>
         </div>
         <div class="wrapper">
-            <h1 class="title">
-            AN EVENING WITH BRUNO MARS
-            </h1>
-            <div id="section2" class="nav">
-                <a href="index.html#">Home</a>
-                <a href="About.html#section2">About</a>
-                <a href="History.html#section2">History</a>
-                <a class="active" href="javascript:void(0)">Discography</a>
+            <div class="tlcont">
+                <h1 class="title">
+                AN EVENING WITH BRUNO MARS
+                </h1>
+            </div>
+            <div class="navcont">
+                <div class="navconbg"></div>
+                <div id="section2" class="nav">
+                    <a href="Home.html#">Home</a>
+                    <a href="About.html#section2">About</a>
+                    <a href="History.html#section2">History</a>
+                    <a class="active" href="javascript:void(0)">Discography</a>
+                </div>
             </div>
             <div class="contentdiv" style="height: 1100px; top: 500px; background: rgb(0,0,0);">
                 <div class="contentdiv" style="top: -140px; background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 81%, rgba(255,255,255,0) 100%);"></div>
