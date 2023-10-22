@@ -78,11 +78,17 @@ body::-webkit-scrollbar {
     margin: auto;
     top: 8cm;
     min-width: 100%;
-    height: 500px;
+    min-height: 100%;
     z-index: 3;
 }
 
 .tlcont {
+    position: absolute;
+    min-width: 100%;
+    height: 500px;
+}
+
+.stick {
     position: -webkit-sticky;
     position: sticky;
     top: 0cm;
@@ -103,7 +109,7 @@ body::-webkit-scrollbar {
 
 .navcont {
     position: absolute;
-    top: 15cm;
+    top: 14cm;
     width: 100%;
     height: 100%;
 }
@@ -162,8 +168,7 @@ body::-webkit-scrollbar {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: -240px;
-    width: 50%;
+    top: -440px;
     width: 350px;
     height: 350px;
     z-index: 2;
@@ -173,7 +178,7 @@ body::-webkit-scrollbar {
 .home {
     position: relative;
     font-size: 40px;
-    top: -240px;
+    top: -440px;
     text-align: center;
     color: #ca975f;
     font-family: 'Bebas Neue Pro';
@@ -185,7 +190,7 @@ body::-webkit-scrollbar {
 .about {
     position: relative;
     font-size: 30px;
-    top: -240px;
+    top: -440px;
     margin: 10px;
     text-indent: 50px;
     text-align: center;
@@ -215,11 +220,11 @@ body::-webkit-scrollbar {
 @keyframes fadeInContent {
     0% { 
         opacity: 0; 
-        top: -190px;
+        top: -390px;
     }
     100% { 
         opacity: 1; 
-        top: -240px;
+        top: -440px;
     }
 }
 
