@@ -15,42 +15,71 @@
         <meta property="og:description" content="Our Favorite Artist Project">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>An Evening with Bruno Mars</title>
-        <link rel="icon" type="image/x-icon" href="https://sonny4546.github.io/OurFavoriteArtist/images/favicon.ico">
-        <link rel="stylesheet" href="https://sonny4546.github.io/OurFavoriteArtist/brnmrs.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./brnmrs.css">
+        <link rel="stylesheet" href="./load.css">
     </head>
     <script defer src="brn.js"></script>
     <body>
+        <div id="load">
+        </div>
         <div>
             <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
-            <img class="spkr" src="https://sonny4546.github.io/OurFavoriteArtist/images/spkr.png">
+            <img class="spkr" src="./images/spkr.png">
             <p class="note">Click the speaker button for sound!</p>
         </div>
         <div>
             <video autoplay muted loop id="bgvideo">
-                <source src="https://sonny4546.github.io/OurFavoriteArtist/vid/bg.mp4" type="video/mp4">
+                <source src="./vid/bg.mp4" type="video/mp4">
             </video>
         </div>
         <div class="wrapper">
             <div class="tlcont">
                 <div class="stick">
                     <h1 class="title">
-                    AN EVENING WITH BRUNO MARS
+                    <a href="#section2">AN EVENING WITH BRUNO MARS</a>
                     </h1>
+                    <div class="sh">
+                        <h1 class="dropsh">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
+                    <div id="tlfade">
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
                 </div>
             </div>
             <div class="navcont">
-                <div class="navconbg"></div>
                 <div id="section2" class="nav">
                     <a class="active" href="javascript:void(0)">Home</a>
-                    <a href="About.html#section2">About</a>
-                    <a href="History.html#section2">History</a>
-                    <a href="Discography.html#section2">Discography</a>
+                    <a href="About.html">About</a>
+                    <a href="History.html">History</a>
+                    <a href="Discography.html">Discography</a>
                 </div>
             </div>
             <div class="contentdiv">
                 <div class="gradient"></div>
-                <p class="home">Our Favorite Artist<br>BRUNO MARS</p>
-                <img class="coverimg" src="https://sonny4546.github.io/OurFavoriteArtist/images/bruno_cover.jpg">
+                <div class="contwrap">
+                    <p class="home">Our Favorite Artist<br>BRUNO MARS</p>
+                    <img class="coverimg" src="./images/bruno_cover.jpg">
+                </div>
             </div>
         </div>
     </body>     

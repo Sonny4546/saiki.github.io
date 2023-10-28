@@ -13,34 +13,61 @@
         <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
         <meta property="og:url" content="https://sonny4546.github.io/OurFavoriteArtist/">
         <meta property="og:description" content="Our Favorite Artist Project">
-        <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
+        <meta property="og:image" content="./images/thmb.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>An Evening with Bruno Mars</title>
-        <link rel="icon" type="image/x-icon" href="https://sonny4546.github.io/OurFavoriteArtist/images/favicon.ico">
-        <link rel="stylesheet" href="https://sonny4546.github.io/OurFavoriteArtist/brnmrs.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./brnmrs.css">
+        <link rel="stylesheet" href="./load.css">
     </head>
     <script defer src="brn.js"></script>
     <body>
+        <div id="load">
+        </div>
         <div>
             <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
-            <img class="spkr" src="https://sonny4546.github.io/OurFavoriteArtist/images/spkr.png">
+            <img class="spkr" src="./images/spkr.png">
             <p class="note">Click the speaker button for sound!</p>
         </div>
         <div>
             <video autoplay muted loop id="bgvideo">
-                <source src="https://sonny4546.github.io/OurFavoriteArtist/vid/bg.mp4" type="video/mp4">
+                <source src="./vid/bg.mp4" type="video/mp4">
             </video>
         </div>
         <div class="wrapper">
             <div class="tlcont">
                 <div class="stick">
                     <h1 class="title">
-                    AN EVENING WITH BRUNO MARS
+                    <a href="#section2">AN EVENING WITH BRUNO MARS</a>
                     </h1>
+                    <div class="sh">
+                        <h1 class="dropsh">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
+                    <div id="tlfade">
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
                 </div>
             </div>
             <div class="navcont">
-                <div class="navconbg"></div>
                 <div id="section2" class="nav">
                     <a href="index.html">Home</a>
                     <a href="About.html#section2">About</a>
@@ -50,6 +77,9 @@
             </div>
             <div class="contentdiv">
                 <div class="gradient"></div>
+                <div class="discography">
+
+                </div>
             </div>
         </div>
     </body>

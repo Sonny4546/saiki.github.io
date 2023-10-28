@@ -13,34 +13,61 @@
         <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
         <meta property="og:url" content="https://sonny4546.github.io/OurFavoriteArtist/">
         <meta property="og:description" content="Our Favorite Artist Project">
-        <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
+        <meta property="og:image" content="./images/thmb.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>An Evening with Bruno Mars</title>
-        <link rel="icon" type="image/x-icon" href="https://sonny4546.github.io/OurFavoriteArtist/images/favicon.ico">
-        <link rel="stylesheet" href="https://sonny4546.github.io/OurFavoriteArtist/brnmrs.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./brnmrs.css">
+        <link rel="stylesheet" href="./load.css">
     </head>
     <script defer src="brn.js"></script>
     <body>
+        <div id="load">
+        </div>
         <div>
             <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
-            <img class="spkr" src="https://sonny4546.github.io/OurFavoriteArtist/images/spkr.png">
+            <img class="spkr" src="./images/spkr.png">
             <p class="note">Click the speaker button for sound!</p>
         </div>
         <div>
             <video autoplay muted loop id="bgvideo">
-                <source src="https://sonny4546.github.io/OurFavoriteArtist/vid/bg.mp4" type="video/mp4">
+                <source src="./vid/bg.mp4" type="video/mp4">
             </video>
         </div>
         <div class="wrapper">
             <div class="tlcont">
                 <div class="stick">
                     <h1 class="title">
-                    AN EVENING WITH BRUNO MARS
+                    <a href="#section2">AN EVENING WITH BRUNO MARS</a>
                     </h1>
+                    <div class="sh">
+                        <h1 class="dropsh">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
+                    <div id="tlfade">
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
                 </div>
             </div>
             <div class="navcont">
-                <div class="navconbg"></div>
                 <div id="section2" class="nav">
                     <a href="index.html">Home</a>
                     <a href="About.html#section2">About</a>
@@ -50,12 +77,14 @@
             </div>
             <div class="contentdiv">
                 <div class="gradient"></div>
-                <p class="about">Bruno Mars, born Peter Gene Hernandez, on October 8, 1985, in Honolulu, Hawaii, is an iconic American singer, songwriter, and record producer. Raised in a musically diverse family, Mars was exposed to a wide array of music genres, which profoundly influenced his musical journey.<br><br></p>
-                <p class="about">At an early age, Mars showcased his talents by performing in various venues across his hometown. His breakthrough arrived when he moved to Los Angeles in pursuit of a music career, signing with Motown Records. He initially gained recognition as a songwriter, co-writing hits such as Flo Rida's "Right Round" and B.o.B's "Nothin' on You" and "Billionaire" by Travie McCoy.<br><br></p>
-                <p class="about">In 2010, Bruno Mars' solo career took flight with the release of his debut studio album, "Doo-Wops & Hooligans." The album's hit singles "Just the Way You Are" and "Grenade" topped charts globally, catapulting him to international fame. Known for his smooth vocals and dynamic performances, Mars effortlessly blended pop, R&B, and soul, garnering critical acclaim for his versatile musical style.<br><br></p>
-                <p class="about">2 years later, Bruno Mars would release a new album called "Unorthodox Jukebox". The album was initially planned to be more "energetic" than his previous work, but ended up presenting a wide range of styles such as R&B, pop, reggae, rock, disco, funk and soul music. Songs like "Locked Out of Heaven" and "When I Was Your Man" reached number ones in the US Billboard Top 100.<br><br></p>
-                <p class="about">Then comes 2016, 4 years after his second album Bruno Mars releases his third album called "24K Magic" inspired by the sound of 1990s R&B that he listened to during his childhood. The most famous singles in the album were "24K Magic", "That's What I Like", and "Finesse" (remix featuring Cardi B). The album became Mars' first album to reach number one on US Top R&B/Hip-Hop Albums.<br><br></p>
-                <p class="about">After 5 years of waiting, March 5, 2021 Bruno Mars went on to release a new single for his latest album called "An Evening with Silk Sonic". Bruno Mars and Anderson .Paak joined forces to form the duo Silk Sonic, aiming to create music that paid homage to the timeless sounds of R&B, soul, and funk from past eras while infusing their own contemporary style. The collaboration was first hinted at in 2020, generating excitement among fans eager to hear the two artists'. The hit singles in the album were "Leave the Door Open" and "Smokin out the Window", which were commercially successful, while "Skate" charted moderately in various countries.<br><br></p>
+                <div class="contwrap">
+                    <p class="history">Bruno Mars, is an iconic American singer, songwriter, and record producer. Raised in a musically diverse family, Mars was exposed to a wide array of music genres, which profoundly influenced his musical journey.<br><br></p>
+                    <p class="history">At an early age, Mars showcased his talents by performing in various venues across his hometown. His breakthrough arrived when he moved to Los Angeles in pursuit of a music career, signing with Motown Records. He initially gained recognition as a songwriter, co-writing hits such as Flo Rida's "Right Round" and B.o.B's "Nothin' on You" and "Billionaire" by Travie McCoy.<br><br></p>
+                    <p class="history">In 2010, Bruno Mars' solo career took flight with the release of his debut studio album, "Doo-Wops & Hooligans." The album's hit singles "Just the Way You Are" and "Grenade" topped charts globally, catapulting him to international fame. Known for his smooth vocals and dynamic performances, Mars effortlessly blended pop, R&B, and soul, garnering critical acclaim for his versatile musical style.<br><br></p>
+                    <p class="history">2 years later, Bruno Mars would release a new album called "Unorthodox Jukebox". The album was initially planned to be more "energetic" than his previous work, but ended up presenting a wide range of styles such as R&B, pop, reggae, rock, disco, funk and soul music. Songs like "Locked Out of Heaven" and "When I Was Your Man" reached number ones in the US Billboard Top 100.<br><br></p>
+                    <p class="history">Then comes 2016, 4 years after his second album Bruno Mars releases his third album called "24K Magic" inspired by the sound of 1990s R&B that he listened to during his childhood. The most famous singles in the album were "24K Magic", "That's What I Like", and "Finesse" (remix featuring Cardi B). The album became Mars' first album to reach number one on US Top R&B/Hip-Hop Albums.<br><br></p>
+                    <p class="history">After 5 years of waiting, March 5, 2021 Bruno Mars went on to release a new single for his latest album called "An Evening with Silk Sonic". Bruno Mars and Anderson .Paak joined forces to form the duo Silk Sonic, aiming to create music that paid homage to the timeless sounds of R&B, soul, and funk from past eras while infusing their own contemporary style. The collaboration was first hinted at in 2020, generating excitement among fans eager to hear the two artists'. The hit singles in the album were "Leave the Door Open" and "Smokin out the Window", which were commercially successful, while "Skate" charted moderately in various countries.<br><br></p>
+                </div>
             </div>
         </div>
     </body>

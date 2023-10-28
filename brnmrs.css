@@ -1,3 +1,5 @@
+/* GLOBAL STYLES */
+
 html {
     scroll-behavior: smooth;
 }
@@ -14,6 +16,8 @@ body::-webkit-scrollbar {
     -ms-overflow-style: none;  
     scrollbar-width: none;  
 }
+
+/* Cover Video */
 
 #bgvideo {
     position: fixed;
@@ -37,6 +41,8 @@ body::-webkit-scrollbar {
     height: 100%;
     z-index: -1;
 }
+
+/* Mute-Unmute Button */
 
 .spkrbtn {
     position: absolute;
@@ -73,14 +79,18 @@ body::-webkit-scrollbar {
     user-select: none;
 }
 
+/* Main */
+
 .wrapper {
-    position: absolute;
+    position: relative;
     margin: auto;
     top: 8cm;
     min-width: 100%;
     min-height: 100%;
     z-index: 3;
 }
+
+/* Title */
 
 .tlcont {
     position: absolute;
@@ -92,13 +102,33 @@ body::-webkit-scrollbar {
     position: -webkit-sticky;
     position: sticky;
     top: 0cm;
-    width: 100%;
+    text-align: center;
+    height: 100px;
 }
 
 .title {
     position: relative;
-    text-align: center;
+    z-index: 1;
+    animation: fadeInTitle 2s;
+    margin: 0px;
+}
+
+.title a {
     color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    font-size: 100px;
+    cursor: default;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    -webkit-user-drag: none;
+}
+
+.dropsh {
+    position: relative;
+    text-align: center;
+    color: #0f0b07;
+    z-index: 0;
     font-family: 'Bebas Neue Pro';
     font-size: 100px;
     animation: fadeInTitle 5s;
@@ -107,18 +137,106 @@ body::-webkit-scrollbar {
     margin: 0px;
 }
 
+.sh {
+    position: relative;
+    top: -115px;
+    transition: all 0.5s;
+}
+
+.stick:hover .sh {
+    top: -108px;
+    transform: translateX(5px);
+}
+
+#tlfade {
+    position: absolute;
+    transform: translateY(-230px);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+.tlghost {
+    text-align: center;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    font-size: 100px;
+    user-select: none;
+    cursor: default;
+    margin: 0px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0%;
+}
+
+#tlfade:is(h1:nth-of-type(1)) {
+    transform: translateY(0px);
+}
+
+#tlfade:is(h1:nth-of-type(2)) {
+    transform: translateY(0px);
+}
+
+#tlfade:is(h1:nth-of-type(3)) {
+    transform: translateY(0px);
+}
+
+#tlfade:is(h1:nth-of-type(4)) {
+    transform: translateY(0px);
+}
+
+#tlfade:is(h1:nth-of-type(5)) {
+    transform: translateY(0px);
+}
+
+#tlfade:is(h1:nth-of-type(6)) {
+    transform: translateY(0px);
+}
+
+.stick:hover #tlfade:is(h1:nth-of-type(1)) {
+    opacity: 75%;
+    transform: translateY(-100px);
+}
+
+.stick:hover #tlfade:is(h1:nth-of-type(2)) {
+    opacity: 50%;
+    transform: translateY(-200px);
+}
+
+.stick:hover #tlfade:is(h1:nth-of-type(3)) {
+    opacity: 25%;
+    transform: translateY(-300px);   
+}
+
+.stick:hover #tlfade:is(h1:nth-of-type(4)) {
+    opacity: 75%;
+    transform: translateY(100px);
+}
+
+.stick:hover #tlfade:is(h1:nth-of-type(5)) {
+    opacity: 50%;
+    transform: translateY(200px);
+}
+
+.stick:hover #tlfade:is(h1:nth-of-type(6)) {
+    opacity: 25%;
+    transform: translateY(300px);
+}
+
+/* Navigation Bar */
+
 .navcont {
     position: absolute;
     top: 14cm;
     width: 100%;
-    height: 100%;
+    height: 75%;
 }
 
 .navconbg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black;
     z-index: 0;
 }
 
@@ -130,6 +248,7 @@ body::-webkit-scrollbar {
     overflow: hidden;
     animation: fadeIn 2s;
     z-index: 2;
+    transition: 0.3s;
 }
 
 .nav a {
@@ -139,7 +258,7 @@ body::-webkit-scrollbar {
     width: 25%;
     font-size: 35px;
     color: #ca975f;
-    font-family: 'Bebas Neue Pro';
+    font-family: 'Bebas Neue Pro Expanded Bold';
     text-decoration: none;
     opacity: 100%;
     user-select: none;
@@ -158,19 +277,21 @@ body::-webkit-scrollbar {
     cursor: default;
 }
 
+/* Content */
+
 .contentdiv {
     position: relative;
     z-index: 1;
     height: 100%; 
     width: 100%;
-    top: 800px; 
+    top: 530px; 
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(48, 39, 28, 0.9) 100%);
 }
 
 .gradient {
     position: relative;
     z-index: 1;
-    top: -330px; 
+    top: -50px; 
     height: 100px;
     width: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(255,255,255,0) 100%);
@@ -178,23 +299,19 @@ body::-webkit-scrollbar {
 
 .coverimg {
     position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    top: -300px;
     width: 350px;
     height: 350px;
     z-index: 2;
+    left: 90px;
     animation: fadeInContent 2s;
 }
 
 .home {
     position: relative;
-    font-size: 40px;
-    top: -300px;
+    font-size: 45px;
     text-align: center;
     color: #ca975f;
-    font-family: 'Bebas Neue Pro';
+    font-family: 'Bebas Neue Pro Bold';
     z-index: 2;
     margin: 0px;
     animation: fadeInContent 2s;
@@ -202,17 +319,40 @@ body::-webkit-scrollbar {
 
 .about {
     position: relative;
-    font-size: 30px;
-    top: -300px;
+    font-size: 35px;
+    top: -350px;
     margin: 10px;
     text-indent: 50px;
-    text-align: center;
+    left: 525px;
     color: #ca975f;
     font-family: 'Bebas Neue Pro';
     z-index: 2;
-    animation: fadeInContent 2s;
+    width: 750px;
     text-align: justify;
+    animation: fadeInContent 2s;
 }
+
+.contwrap {
+    position: relative;
+    top: -30px;
+    height: 50%;
+}
+
+.history {
+    position: relative;
+    font-size: 35px;
+    margin: 10px;
+    text-indent: 50px;
+    left: 340px;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    z-index: 2;
+    width: 750px;
+    text-align: justify;
+    animation: fadeInContent 2s;
+}
+
+/* Animations */
 
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -221,23 +361,21 @@ body::-webkit-scrollbar {
 
 @keyframes fadeInTitle {
     0% { 
-        opacity: 0; 
-        top: 2cm;
+        transform: translateY(0.5cm);
     }
     100% { 
-        opacity: 1; 
-        top: 0cm;
+        transform: translateY(0cm);
     }
 }
 
 @keyframes fadeInContent {
     0% { 
         opacity: 0; 
-        top: -250px;
+        transform: translateY(20px);
     }
     100% { 
         opacity: 1; 
-        top: -300px;
+        transform: translateY(0px);
     }
 }
 
@@ -261,11 +399,27 @@ body::-webkit-scrollbar {
     100% {opacity: 0;}
 }
 
+/* Fonts Used */
+
 @font-face {
     font-family: Bebas Neue Pro;
-    src: url(https://sonny4546.github.io/OurFavoriteArtist/font/BebasNeuePro-Regular.ttf) format('truetype');
+    src: url(./font/BebasNeuePro-Regular.ttf) format('truetype');
     font-style: normal;
 }
+
+@font-face {
+    font-family: Bebas Neue Pro Bold;
+    src: url(./font/BebasNeuePro-Bold.ttf) format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Bebas Neue Pro Expanded Bold;
+    src: url(./font/BebasNeuePro-ExpandedBold.ttf) format('truetype');
+    font-style: normal;
+}
+
+/* Mobile Responsiveness */
 
 @media (max-width: 900px) {
     .note {

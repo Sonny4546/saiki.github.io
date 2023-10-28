@@ -13,34 +13,61 @@
         <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
         <meta property="og:url" content="https://sonny4546.github.io/OurFavoriteArtist/">
         <meta property="og:description" content="Our Favorite Artist Project">
-        <meta property="og:image" content="https://sonny4546.github.io/OurFavoriteArtist/images/thmb.png">
+        <meta property="og:image" content="./images/thmb.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>An Evening with Bruno Mars</title>
-        <link rel="icon" type="image/x-icon" href="https://sonny4546.github.io/OurFavoriteArtist/images/favicon.ico">
-        <link rel="stylesheet" href="https://sonny4546.github.io/OurFavoriteArtist/brnmrs.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./brnmrs.css">
+        <link rel="stylesheet" href="./load.css">
     </head>
     <script defer src="brn.js"></script>
     <body>
+        <div id="load">
+        </div>
         <div>
             <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
-            <img class="spkr" src="https://sonny4546.github.io/OurFavoriteArtist/images/spkr.png">
+            <img class="spkr" src="./images/spkr.png">
             <p class="note">Click the speaker button for sound!</p>
         </div>
         <div>
             <video autoplay muted loop id="bgvideo">
-                <source src="https://sonny4546.github.io/OurFavoriteArtist/vid/bg.mp4" type="video/mp4">
+                <source src="./vid/bg.mp4" type="video/mp4">
             </video>
         </div>
         <div class="wrapper">
             <div class="tlcont">
                 <div class="stick">
                     <h1 class="title">
-                    AN EVENING WITH BRUNO MARS
+                    <a href="#section2">AN EVENING WITH BRUNO MARS</a>
                     </h1>
+                    <div class="sh">
+                        <h1 class="dropsh">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
+                    <div id="tlfade">
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                        <h1 id="tlfade" class="tlghost">
+                            AN EVENING WITH BRUNO MARS
+                        </h1>
+                    </div>
                 </div>
             </div>
             <div class="navcont">
-                <div class="navconbg"></div>
                 <div id="section2" class="nav">
                     <a href="index.html">Home</a>
                     <a class="active" href="javascript:void(0)">About</a>
@@ -50,10 +77,13 @@
             </div>
             <div class="contentdiv">
                 <div class="gradient"></div>
-                <p class="home">PETER GENE HERNANDEZ<br>aka BRUNO MARS</p>
-                <img class="coverimg" src="https://sonny4546.github.io/OurFavoriteArtist/images/about.jpg">
-                <p class="about">Bruno Mars is a world-renowned American singer, songwriter, and record producer, celebrated for his captivating stage presence and remarkable vocal range. Born Peter Gene Hernandez on October 8, 1985, in Honolulu, Hawaii. His mother emigrated from the Philippines to Hawaii, His parents met while performing in a show in which his mother was a Hula dancer and his father played percussion. At the age of two, he was nicknamed "Bruno" by his father because of his resemblance to professional wrestler Bruno Sammartino.<br><br></p>
-                <p class="about">Throughout his career, Bruno Mars has received numerous accolades, including multiple Grammy Awards, and has collaborated with several esteemed artists, solidifying his position as a prominent figure in the contemporary music industry. With his charismatic performances and chart-topping singles, Bruno Mars continues to captivate audiences worldwide, leaving an indelible mark on the music landscape.</p>
+                <div class="contwrap">
+                    <p class="home">PETER GENE HERNANDEZ<br>aka BRUNO MARS</p>
+                    <img class="coverimg" src="./images/about.jpg">
+                    <p class="about">Bruno Mars is a world-renowned American singer, songwriter, and record producer, celebrated for his captivating stage presence and remarkable vocal range. Born Peter Gene Hernandez on October 8, 1985, in Honolulu, Hawaii. His mother emigrated from the Philippines to Hawaii, His parents met while performing in a show in which his mother was a Hula dancer and his father played percussion. At the age of two, he was nicknamed "Bruno" by his father because of his resemblance to professional wrestler Bruno Sammartino.<br><br></p>
+                    <p class="about" style="left: 85px; top: -250px;">Throughout his career, Bruno Mars has received numerous accolades, including multiple Grammy Awards, and has collaborated with several esteemed artists, solidifying his position as a prominent figure in the contemporary music industry. With his charismatic performances and chart-topping singles, Bruno Mars continues to captivate audiences worldwide, leaving an indelible mark on the music landscape.</p>
+                    <img class="coverimg" style="position: absolute; left: 900px; width: 410px; height: 291px; top: 595px;" src="./images/grammys.jpg">
+                </div>
             </div>
         </div>
     </body>
