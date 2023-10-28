@@ -297,6 +297,17 @@ body::-webkit-scrollbar {
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(255,255,255,0) 100%);
 }
 
+.img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 350px;
+    z-index: 2;
+    animation: fadeInContent 2s;
+}
+
 .coverimg {
     position: relative;
     width: 350px;
@@ -304,6 +315,14 @@ body::-webkit-scrollbar {
     z-index: 2;
     left: 90px;
     animation: fadeInContent 2s;
+}
+
+.aboutimg {
+    position: absolute; 
+    left: 900px; 
+    width: 410px; 
+    height: 291px; 
+    top: 595px;
 }
 
 .home {
@@ -330,6 +349,21 @@ body::-webkit-scrollbar {
     width: 750px;
     text-align: justify;
     animation: fadeInContent 2s;
+}
+
+.about2 {
+    position: relative;
+    font-size: 35px;
+    margin: 10px;
+    text-indent: 50px;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro';
+    z-index: 2;
+    width: 750px;
+    text-align: justify;
+    animation: fadeInContent 2s;
+    left: 85px; 
+    top: -250px;
 }
 
 .contwrap {
@@ -422,42 +456,59 @@ body::-webkit-scrollbar {
 /* Mobile Responsiveness */
 
 @media (max-width: 900px) {
+    .title a {
+        font-size: 50px;
+    }
+
+    .tlghost {
+        opacity: 0%;
+    }
+
+    .dropsh {
+        opacity: 0%;
+    }
+
+    .coverimg {
+        left: 0px;
+        width: 250px;
+        height: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .note {
-        width: 200px;
-        top: 0px;
+        width: 250px;
     }
-    .navcont {
-        top: 17cm;
-    }
-    .gradient {
-        top: -200px;
-    }
+
     .nav {
         position: relative;
     }
+
     .nav a {
         width: 50%;
     }
-    .contentdiv {
-        height: 100%;
-    }
-    .home {
-        top: -170px;
-    }
-    .coverimg {
-        top: -170px;
-    }
+
     .about {
-        top: -170px;
+        left: 0px;
+        width: 340px;
+        top: 25px;
     }
+
+    .about {
+        left: 0px;
+        width: 340px;
+        top: 50px;
+    }
+
     @keyframes fadeInContent {
         0% { 
             opacity: 0; 
-            top: -120px;
+            transform: translateY(5px);
         }
         100% { 
             opacity: 1; 
-            top: -170px;
+            transform: translateY(0px);
         }
     }
 }
