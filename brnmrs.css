@@ -127,6 +127,25 @@ body::-webkit-scrollbar {
     text-shadow: rgba(0,0,0,0.9) 0px 0px 39px;
 }
 
+.glowbtn {
+    z-index: 3;
+    position: absolute;
+    width: 923px;
+    height: 100px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#tlGlow {
+    background-color: transparent;
+}
+
 .dropsh {
     position: relative;
     text-align: center;
@@ -149,7 +168,7 @@ body::-webkit-scrollbar {
 .stick:hover .sh {
     top: -108px;
     transform: translateX(5px);
-    animation: titleGlow 5s;
+    animation: titleGlow2 10s ease-in-out infinite;
 }
 
 #tlfade {
@@ -304,13 +323,10 @@ body::-webkit-scrollbar {
 
 .img {
     position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 350px;
     height: 350px;
     z-index: 2;
-    animation: fadeInContent 2s;
+    animation: fadeInContent 1s;
 }
 
 .coverimg {
@@ -319,7 +335,7 @@ body::-webkit-scrollbar {
     height: 350px;
     z-index: 2;
     left: 90px;
-    animation: fadeInContent 2s;
+    animation: fadeInContent 1s;
 }
 
 .aboutimg {
@@ -338,7 +354,15 @@ body::-webkit-scrollbar {
     font-family: 'Bebas Neue Pro Bold';
     z-index: 2;
     margin: 0px;
-    animation: fadeInContent 2s;
+    animation: fadeInContent 1s;
+}
+
+.spotify {
+    position: absolute;
+    right: 35px;
+    top: 106px;
+    z-index: 2;
+    animation: fadeInContent 1s;
 }
 
 .about {
@@ -442,8 +466,30 @@ body::-webkit-scrollbar {
     0% {
         text-shadow: rgba(0,0,0,0) 0px 0px 0px;
     }
-    50% {
+    30%,
+    70% {
         text-shadow: rgba(255,162,0,0.9) 0px 0px 39px;
+    }
+    100% {
+        text-shadow: rgba(0,0,0,0) 0px 0px 0px;
+    }
+}
+
+@keyframes titleGlow2 {
+    0% {
+        text-shadow: rgba(0,0,0,0) 0px 0px 0px;
+    }
+    20% {
+        text-shadow: #0759d3e6 0px 0px 39px;
+    }
+    40% {
+        text-shadow: #6014dae6 0px 0px 39px;
+    }
+    60% {
+        text-shadow: #ffa200e6 0px 0px 39px;
+    }
+    80% {
+        text-shadow: #aa1818e6 0px 0px 39px;
     }
     100% {
         text-shadow: rgba(0,0,0,0) 0px 0px 0px;
@@ -477,12 +523,17 @@ body::-webkit-scrollbar {
         font-size: 50px;
     }
 
+    #tlfade {
+        opacity: 0%;
+    }
+
     .tlghost {
         opacity: 0%;
     }
 
     .dropsh {
-        opacity: 0%;
+        font-size: 50px;
+        top: 55px;
     }
 
     .coverimg {

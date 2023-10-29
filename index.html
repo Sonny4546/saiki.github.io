@@ -37,7 +37,8 @@
             <div class="tlcont">
                 <div class="stick">
                     <h1 class="title">
-                        <a href="#section2">AN EVENING WITH BRUNO MARS</a>
+                        <a id="tlGlow">AN EVENING WITH BRUNO MARS</a>
+                        <button class="glowbtn" onclick="GlowToggle()" type="button"></button>
                     </h1>
                     <div class="sh">
                         <h1 class="dropsh">
@@ -77,8 +78,14 @@
             <div class="contentdiv">
                 <div class="gradient"></div>
                 <div class="contwrap">
-                    <p class="home">Our Favorite Artist<br>BRUNO MARS</p>
-                    <img class="img" src="./images/bruno_cover.jpg">
+                    <p class="home" style="right: 340px;">Our Favorite Artist<br>BRUNO MARS</p>
+                    <img class="img" style="left: 50px;" src="./images/bruno_cover2.jpg">
+                    <iframe class="spotify" 
+                            style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/artist/0du5cEVh5yTK9QJze8zA0C?utm_source=generator&theme=0" 
+                            width="50%" height="352" frameBorder="0" allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
