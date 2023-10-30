@@ -79,6 +79,26 @@ body::-webkit-scrollbar {
     user-select: none;
 }
 
+.skip {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue Pro';
+    font-size: 40px;
+    text-align: center;
+    z-index: 5;
+    background-color: #645a4f77;
+    border-radius: 2vmin;
+    width: 50%;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    top: 20px;
+    animation: fadeInOut 6s ease-in-out 0s 1 normal forwards;
+    cursor: default;
+    user-select: none;
+    opacity: 20%;
+}
+
 /* Main */
 
 .wrapper {
@@ -111,8 +131,9 @@ body::-webkit-scrollbar {
 .title {
     position: relative;
     z-index: 1;
-    animation: fadeInTitle 2s;
+    animation: fadeInTitle 1s;
     margin: 0px;
+    transition: all 0.25s;
 }
 
 .title a {
@@ -140,6 +161,7 @@ body::-webkit-scrollbar {
     padding: 0;
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 #tlGlow {
@@ -153,7 +175,7 @@ body::-webkit-scrollbar {
     z-index: 0;
     font-family: 'Bebas Neue Pro';
     font-size: 100px;
-    animation: fadeInTitle 5s;
+    animation: fadeInTitle 1s;
     user-select: none;
     cursor: default;
     margin: 0px;
@@ -168,7 +190,7 @@ body::-webkit-scrollbar {
 .stick:hover .sh {
     top: -108px;
     transform: translateX(5px);
-    animation: titleGlow2 10s ease-in-out infinite;
+    animation: titleGlow2 15s ease-in-out infinite;
 }
 
 #tlfade {
@@ -178,6 +200,7 @@ body::-webkit-scrollbar {
     height: 100%;
     pointer-events: none;
     transition: all 0.5s;
+    z-index: 0;
 }
 
 .tlghost {
@@ -327,6 +350,7 @@ body::-webkit-scrollbar {
     height: 350px;
     z-index: 2;
     animation: fadeInContent 1s;
+    border-radius: 1vmin;
 }
 
 .coverimg {
@@ -468,7 +492,7 @@ body::-webkit-scrollbar {
     }
     30%,
     70% {
-        text-shadow: rgba(255,162,0,0.9) 0px 0px 39px;
+        text-shadow: rgba(255,162,0,0.9) 0px 0px 70px;
     }
     100% {
         text-shadow: rgba(0,0,0,0) 0px 0px 0px;
@@ -480,7 +504,7 @@ body::-webkit-scrollbar {
         text-shadow: rgba(0,0,0,0) 0px 0px 0px;
     }
     20% {
-        text-shadow: #0759d3e6 0px 0px 39px;
+        text-shadow: #0759d342 0px 0px 25px;
     }
     40% {
         text-shadow: #6014dae6 0px 0px 39px;

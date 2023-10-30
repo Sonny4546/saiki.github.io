@@ -28,6 +28,7 @@
             <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
             <img class="spkr" src="./images/spkr.png">
             <p class="note">Click the speaker button for sound!</p>
+            <p class="skip">Click the title to skip to content</p>
         </div>
         <div>
             <video autoplay muted loop id="bgvideo">
@@ -37,12 +38,12 @@
         <div class="wrapper">
             <div class="tlcont">
                 <div class="stick">
-                    <h1 class="title">
+                    <h1 id="title" class="title">
                         <a id="tlGlow">AN EVENING WITH BRUNO MARS</a>
-                        <button class="glowbtn" onclick="GlowToggle()" type="button"></button>
+                        <button id="btn" class="glowbtn" onclick="TitleClick()" type="button"></button>
                     </h1>
                     <div class="sh">
-                        <h1 class="dropsh">
+                        <h1 id="dropsh" class="dropsh">
                             AN EVENING WITH BRUNO MARS
                         </h1>
                     </div>
