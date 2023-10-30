@@ -179,6 +179,7 @@ body::-webkit-scrollbar {
     user-select: none;
     cursor: default;
     margin: 0px;
+    transition: all 0.25s;
 }
 
 .sh {
