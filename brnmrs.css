@@ -347,6 +347,9 @@ body::-webkit-scrollbar {
 
 .img {
     position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 350px;
     height: 350px;
     z-index: 2;
@@ -376,7 +379,22 @@ body::-webkit-scrollbar {
     font-size: 45px;
     text-align: center;
     color: #ca975f;
-    font-family: 'Bebas Neue Pro Bold';
+    font-family: 'CircularSp Bold';
+    line-height: 1.2;
+    z-index: 2;
+    margin: 0px;
+    animation: fadeInContent 1s;
+}
+
+.home2 {
+    position: absolute;
+    top: 3px;
+    width: 35%;
+    font-size: 45px;
+    text-align: center;
+    color: #ca975f;
+    font-family: 'CircularSp Book';
+    line-height: 1.2;
     z-index: 2;
     margin: 0px;
     animation: fadeInContent 1s;
@@ -388,6 +406,16 @@ body::-webkit-scrollbar {
     top: 106px;
     z-index: 2;
     animation: fadeInContent 1s;
+}
+
+.youtube {
+    position: absolute;
+    top: 125px;
+    border-radius: 2vmin;
+    z-index: 2;
+    margin: auto;
+    animation: fadeInContent 1s;
+    transform: scale(0.8) translateX(-30px);
 }
 
 .about {
@@ -538,6 +566,18 @@ body::-webkit-scrollbar {
 @font-face {
     font-family: Bebas Neue Pro Expanded Bold;
     src: url(./font/BebasNeuePro-ExpandedBold.ttf) format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CircularSp Book;
+    src: url(./font/CircularSp-Book.woff2) format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CircularSp Bold;
+    src: url(./font/CircularSp-Bold.woff2) format('woff2');
     font-style: normal;
 }
 
