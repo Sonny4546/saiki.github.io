@@ -1,14 +1,21 @@
 /* GLOBAL STYLES */
 
 html {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
+    overflow: auto;
+    min-height: 100vh;
     margin: 0;
-    font-family: Arial;
-    font-size: 17px;
+    padding: 0;
     background-color: black;
+    vertical-align: baseline;
 }
 
 body::-webkit-scrollbar {
@@ -31,6 +38,7 @@ body::-webkit-scrollbar {
     width: auto;
     height: auto;  
     opacity: 50%;
+    transition: all 0.5s;
 }
 
 .vidwrap {
@@ -61,10 +69,10 @@ body::-webkit-scrollbar {
     width: 50px;
     height: 50px;
     z-index: 4;
-    animation: fadeIn 5s;
+    animation: fadeIn 1s;
 }
 
-.note {
+#note {
     position: relative;
     color: #ca975f;
     font-family: 'Bebas Neue Pro';
@@ -74,8 +82,9 @@ body::-webkit-scrollbar {
     margin: 0px;
     width: 500px;
     top: 10px;
-    animation: fadeInOut 10s linear 0s 1 normal forwards;
+    animation: InOut 2s linear infinite;
     cursor: default;
+    transition: all;
     user-select: none;
 }
 
@@ -102,11 +111,11 @@ body::-webkit-scrollbar {
 /* Main */
 
 .wrapper {
-    position: relative;
+    position: absolute;
     margin: auto;
     top: 8cm;
     min-width: 100%;
-    min-height: 100%;
+    height: 100vh;
     z-index: 3;
 }
 
@@ -313,7 +322,7 @@ body::-webkit-scrollbar {
     background: #00000070;
     overflow: hidden;
 }
-  
+
 .nav a:hover {
     color: #987045;
     text-shadow: rgb(215, 136, 0) 0px 0px 10px;
@@ -330,16 +339,17 @@ body::-webkit-scrollbar {
 .contentdiv {
     position: relative;
     z-index: 1;
-    height: 100%; 
     width: 100%;
+    height: 759px;
     top: 530px; 
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(48, 39, 28, 0.9) 100%);
+    transition: all 0.25s;
 }
 
 .gradient {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    top: -50px; 
+    top: 450px; 
     height: 100px;
     width: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(255,255,255,0) 100%);
@@ -364,6 +374,7 @@ body::-webkit-scrollbar {
     z-index: 2;
     left: 90px;
     animation: fadeInContent 1s;
+    -webkit-user-drag: none;
 }
 
 .aboutimg {
@@ -372,6 +383,7 @@ body::-webkit-scrollbar {
     width: 410px; 
     height: 291px; 
     top: 595px;
+    -webkit-user-drag: none;
 }
 
 .home {
@@ -450,8 +462,8 @@ body::-webkit-scrollbar {
 
 .contwrap {
     position: relative;
-    top: -30px;
-    height: 50%;
+    top: 60px;
+    height: 0%;
 }
 
 .history {
@@ -468,11 +480,333 @@ body::-webkit-scrollbar {
     animation: fadeInContent 2s;
 }
 
+/* Discography */
+
+.discography {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.gallery {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    height: 600px;
+    transition: all 2s;
+}
+
+.header {
+    position: relative;
+    font-size: 45px;
+    text-align: center;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro Bold';
+    line-height: 0.8;
+    z-index: 2;
+    margin: 0px;
+    text-shadow: #e78b28 0px 0px 20px;
+    animation: fadeIn 2s;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform: translateY(10px);
+}
+
+.mainwrap {
+    position: relative;
+    transition: all 2s;
+}
+
+.albums {
+    position: relative;
+    z-index: 3;
+    margin: auto;
+    height: 610px;
+    animation: fadeIn 1s ease-in 0s forwards;
+    perspective: 1280px;
+    backface-visibility: hidden;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.albums div {
+    position: absolute;
+    z-index: 3;
+    width: 1280px;
+    height: 720px;
+    transition: all 0.2s;
+    user-select: none;
+    -webkit-user-drag: none;
+    backface-visibility: hidden;
+}
+
+.mainimage {
+    box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
+    border-radius: 2vmin;
+    border-width: 2px;
+    border-color: #000000;
+    -webkit-user-drag: none;
+}
+
+.album {
+    opacity: 0%;
+    transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg);
+}
+
+.album1 {
+    opacity: 0%;
+    transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg);
+}
+
+.album2 {
+    opacity: 50%;
+    filter: blur(6px);
+    transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+}
+
+.album3 {
+    filter: blur(3px);
+    transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+}
+
+.album4 {
+    opacity: 100%;
+    transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+}
+
+.al {
+    color: #ffffff;
+}
+
+.al1 {
+    color: #fbf0c3;
+}
+
+.al2 {
+    color: #a7885c;
+}
+
+.al3 {
+    color: #fbe482;
+}
+
+.al4 {
+    color: #ca975f;
+    animation: slk 0.5s ease-in-out forwards;
+}
+
+.albumimage {
+    box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
+    overflow: hidden;
+}
+
+.albums > div > h1 {
+    position: absolute;
+    z-index: 3;
+    font-size: 100px;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Bebas Neue Pro Bold';
+    background: #000000b9;
+    border-radius: 1vmin;
+    background-blend-mode: multiply;
+    width: 100%;
+    transform: translateY(720px);
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: all 0.2s;
+}
+
+.arrow_ld {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    transform: translateY(200px);
+    animation: fadeIn 1s;
+    transition: all 0.5s;
+}
+
+.arrow_rd {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    transform: translateY(200px);
+    animation: fadeIn 1s;
+    transition: all 0.5s;
+}
+
+#arrow_r > div {
+    position: absolute;
+    z-index: 5;
+}
+
+#arrow_r > div > img {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: all 0.5s;
+}
+
+#arrow_l > div {
+    position: absolute;
+    z-index: 5;
+    left: 10px;
+}
+
+#arrow_l > div > img {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: all 0.5s;
+}
+
+.arrow_r {
+    margin-left: 1290px;
+}
+
+.arrow_r:hover img {
+    opacity: 50%;
+}
+
+.arrow_l:hover img {
+    opacity: 50%;
+}
+
+.albtn {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+.albtn:hover {
+    position: absolute;
+    z-index: 5;
+}
+
+.dgbtn {
+    z-index: 5;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.shine {
+    position: absolute;
+    transform: translate(-971px, 0px) rotate(295deg);
+    pointer-events: none;
+}
+
+.albumimage > button {
+    display: none;
+}
+
+#slkbtn {
+    display: block;
+}
+
+.songswrapper > div > table {
+    font-family: CircularSp Book;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 60%;
+    transform: translate(0px, 150px) scale(1.6);
+    letter-spacing: 1pt; 
+}
+
+td, th {
+    padding: 8px;
+}
+
+.number {
+    text-align: center;
+    color: #b9bbbe;
+}
+
+.songtitle {
+    font-family: CircularSp Title Black;
+    text-align: left;
+    color: #ffffff;
+    font-size: large;
+}
+
+.data {
+    text-align: center;
+    color: #b9bbbe;
+}
+
+.duration {
+    text-align: right;
+    color: #b9bbbe;
+}
+
+.columns {
+    font-family: CircularSp Bold;
+    color: white;
+    text-align: center;
+}
+
+#exttable {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    width: 65%;
+    transform: translate(0px, 150px) scale(1.4);
+}
+
+#dwhtable {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#ujtable {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#xxivtable {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#slktable {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
 /* Animations */
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 @keyframes fadeInTitle {
@@ -506,6 +840,17 @@ body::-webkit-scrollbar {
 	75% {
 		opacity: 1;
 	}
+}
+
+@keyframes InOut {
+    0%,
+    100% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
 }
 
 @keyframes fadeOutbtn {
@@ -549,6 +894,137 @@ body::-webkit-scrollbar {
     }
 }
 
+@keyframes AlbumOut {
+    from {
+        transform: none;
+    }
+    to {
+        transform: translate(563px, 255px) scale(0.2) rotateX(45deg);
+    }
+}
+
+@keyframes AlbumIn {
+    from {
+        transform: translate(563px, 255px) scale(0.2) rotateX(45deg);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes enterAlbum {
+    from {
+        opacity: 100%;
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+    to {
+        opacity: 100%;
+        transform: scale(70%) translateY(-110px) translateX(80px) rotateX(0deg) rotateY(0deg) skewY(0deg) skewX(0deg);
+    }
+}
+
+@keyframes MaintoOut {
+    from {
+        opacity: 100%;
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+    to {
+        opacity: 0%;
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+}
+
+@keyframes RighttoMain {
+    from {
+        filter: blur(3px);
+        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+    to {
+        filter: blur(0px);
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+}
+
+@keyframes Rightto2nd {
+    from {
+        opacity: 50%;
+        filter: blur(6px);
+        transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+    to {
+        opacity: 100%;
+        filter: blur(3px);
+        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+}
+
+@keyframes Rightto3rd {
+    from {
+        opacity: 0%;
+        transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg);
+    }
+    to {
+        opacity: 50%;
+        filter: blur(6px);
+        transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+    }
+}
+
+@keyframes ext {
+    0% {
+        text-shadow: transparent;
+    }
+    to {
+        text-shadow: #900a03 0px 0px 48px;
+    }
+}
+
+@keyframes dwh {
+    0% {
+        text-shadow: transparent;
+    }
+    to {
+        text-shadow: #f7bc24 0px 0px 48px;
+    }
+}
+
+@keyframes uj {
+    0% {
+        text-shadow: transparent;
+    }
+    100% {
+        text-shadow: #c5252d 0px 0px 48px;
+    }
+}
+
+@keyframes xxiv {
+    0% {
+        text-shadow: transparent;
+    }
+    100% {
+        text-shadow: maroon 0px 0px 48px;
+    }
+}
+
+@keyframes slk {
+    0% {
+        text-shadow: transparent;
+    }
+    100% {
+        text-shadow: #f7bc24 0px 0px 48px;
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translate(-971px, 0px) rotate(295deg);
+    }
+
+    100% {
+        transform: scale(1.5) translate(595px, 226px) rotate(295deg);
+    }
+}
+
 /* Fonts Used */
 
 @font-face {
@@ -581,6 +1057,18 @@ body::-webkit-scrollbar {
     font-style: normal;
 }
 
+@font-face {
+    font-family: CircularSp Title Black;
+    src: url(./font/CircularSpTitle-Black.woff2) format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CircularSp Title Bold;
+    src: url(./font/CircularSpTitle-Bold.woff2) format('woff2');
+    font-style: normal;
+}
+
 /* Mobile Responsiveness */
 
 @media (max-width: 900px) {
@@ -590,10 +1078,12 @@ body::-webkit-scrollbar {
 
     #tlfade {
         opacity: 0%;
+        transform: translateY(-500px);
     }
 
     .tlghost {
         opacity: 0%;
+        font-size: 50px;
     }
 
     .dropsh {

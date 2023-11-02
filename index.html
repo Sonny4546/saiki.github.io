@@ -22,18 +22,19 @@
         <link rel="stylesheet" href="./brnmrs.css">
         <link rel="stylesheet" href="./load.css">
     </head>
-    <script defer src="brn.js"></script>
+    <script defer src="main.js"></script>
     <body>
         <div id="loadOverlay">
         </div>
-        <div>
+        <div data-btn="false">
             <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
             <img class="spkr" src="./images/spkr.png">
-            <p class="note">Click the speaker button for sound!</p>
+            <img id="off" class="spkr" src="./images/spkrX.png">
+            <p id="note" class="note">Click the speaker button for sound!</p>
         </div>
         <div>
             <video autoplay muted loop id="bgvideo">
-                <source src="./vid/bg.mp4" type="video/mp4">
+                <source src="./vid/home.mp4" type="video/mp4">
             </video>
         </div>
         <div class="wrapper">
@@ -43,8 +44,8 @@
                         <a id="tlGlow">AN EVENING WITH BRUNO MARS</a>
                         <button id="btn" class="glowbtn" onclick="TitleClick()" type="button"></button>
                     </h1>
-                    <div class="sh">
-                        <h1 id="dropsh" class="dropsh">
+                    <div id="dropsh" class="sh">
+                        <h1 class="dropsh">
                             AN EVENING WITH BRUNO MARS
                         </h1>
                     </div>
@@ -78,8 +79,8 @@
                     <a href="Discography.html">Discography</a>
                 </div>
             </div>
+            <div class="gradient"></div>
             <div class="contentdiv">
-                <div class="gradient"></div>
                 <div class="contwrap">
                     <p class="home">Our Favorite Artist<br>BRUNO MARS</p>
                     <img class="img" src="./images/bruno_cover2.jpg">

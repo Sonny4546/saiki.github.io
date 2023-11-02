@@ -23,19 +23,20 @@
         <link rel="stylesheet" href="./brnmrs.css">
         <link rel="stylesheet" href="./load.css">
     </head>
-    <script defer src="brn.js"></script>
+    <script defer src="main.js"></script>
     <body>
-        <div id="load">
+        <div id="loadOverlay">
         </div>
-        <div>
+        <div data-btn="false">
             <button class="spkrbtn" onclick="AudioToggle()" type="button"></button>
             <img class="spkr" src="./images/spkr.png">
-            <p class="note">Click the speaker button for sound!</p>
+            <img id="off" class="spkr" src="./images/spkrX.png">
+            <p id="note" class="note">Click the speaker button for sound!</p>
             <p class="skip">Click the title to skip to content</p>
         </div>
-        <div>
+        <div class="vidwrap">
             <video autoplay muted loop id="bgvideo">
-                <source src="./vid/bg.mp4" type="video/mp4">
+                <source src="./vid/discography.mp4" type="video/mp4">
             </video>
         </div>
         <div class="wrapper">
@@ -80,10 +81,414 @@
                     <a class="active" href="javascript:void(0)">Discography</a>
                 </div>
             </div>
-            <div class="contentdiv">
-                <div class="gradient"></div>
+            <div class="gradient"></div>
+            <div id="contdiv" class="contentdiv">
                 <div class="discography">
-
+                    <div class="gallery">
+                        <p class="header">BRUNO MARS'<br>ALBUMS</p>
+                        <div id="mainwrap" class="mainwrap">
+                            <div id="arrow_r" class="arrow_rd">
+                                <div id="right" class="arrow_r">
+                                    <img src="./images/chevron_R.png">
+                                    <button id="next" class="dgbtn" onclick="first()" type="button"></button>
+                                </div>
+                            </div>
+                            <div id="arrow_l" class="arrow_ld">
+                                <div id="left" class="arrow_l">
+                                    <img src="./images/chevron_L.png">
+                                    <button id="prev" class="dgbtn" onclick="ninth()" type="button"></button>
+                                </div>
+                            </div>
+                            <div class="albums">
+                                <div id="ext" class="album">
+                                    <div class="albumimage">
+                                        <button id="extbtn" class="albtn" onclick="enterext()" type="button"></button>
+                                        <img id="shine0" class="shine" src="./images/shine.png">
+                                        <img class="mainimage" src="./images/ext.png">
+                                    </div>
+                                    <h1 id="al" class="al">Single's, EPs and Collabs</h1>
+                                </div>
+                                <div id="dwh" class="album1">
+                                    <div class="albumimage">
+                                        <button id="dwhbtn" class="albtn" onclick="enterdwh()" type="button"></button>
+                                        <img id="shine1" class="shine" src="./images/shine.png">
+                                        <img class="mainimage" src="./images/dwh.png">
+                                    </div>
+                                    <h1 id="al1" class="al1">DOO-WOOPS & HOOLIGANS</h1>
+                                </div>
+                                <div id="uj" class="album2">
+                                    <div class="albumimage">
+                                        <button id="ujbtn" class="albtn" onclick="enteruj()" type="button"></button>
+                                        <img id="shine2" class="shine" src="./images/shine.png">
+                                        <img class="mainimage" src="./images/uj.png">
+                                    </div>
+                                    <h1 id="al2" class="al2">UNORTHODOX JUKEBOX</h1>
+                                </div>
+                                <div id="xxiv" class="album3">
+                                    <div class="albumimage">
+                                        <button id="xxivbtn" class="albtn" onclick="enterxxiv()" type="button"></button>
+                                        <img id="shine3" class="shine" src="./images/shine.png">
+                                        <img class="mainimage" src="./images/xxiv.png">
+                                    </div>
+                                    <h1 id="al3" class="al3">24K MAGIC</h1>
+                                </div>
+                                <div id="slk" class="album4">
+                                    <div class="albumimage">
+                                        <button id="slkbtn" class="albtn" onclick="enterslk()" type="button"></button>
+                                        <img id="shine4" class="shine" src="./images/shine.png">
+                                        <img class="mainimage" src="./images/slk.png">
+                                    </div>
+                                    <h1 id="al4" class="al4">AN EVENING WITH SILK SONIC</h1>
+                                </div>
+                            </div>
+                            <div id="songs" class="songswrapper">
+                                <div id="dwhsongs" class="songs1">
+                                    <table id="dwhtable">
+                                        <tr>
+                                            <th class="columns">#</th>
+                                            <th class="columns">Title</th>
+                                            <th class="columns">Spotify Streams</th>
+                                            <th class="columns">Duration</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">1</th>
+                                            <th class="songtitle">Grenade</th>
+                                            <th class="data">1,127,716,405</th>
+                                            <th class="duration">3:42</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">2</th>
+                                            <th class="songtitle">Just the Way You Are</th>
+                                            <th class="data">1,764,900,439</th>
+                                            <th class="duration">3:40</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">3</th>
+                                            <th class="songtitle">Our First Time</th>
+                                            <th class="data">65,547,527</th>
+                                            <th class="duration">4:03</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">4</th>
+                                            <th class="songtitle">Runaway Baby</th>
+                                            <th class="data">383,623,628</th>
+                                            <th class="duration">2:28</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">5</th>
+                                            <th class="songtitle">The Lazy Song</th>
+                                            <th class="data">829,307,599</th>
+                                            <th class="duration">3:09</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">6</th>
+                                            <th class="songtitle">Marry You</th>
+                                            <th class="data">849,842,774</th>
+                                            <th class="duration">4:15</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">7</th>
+                                            <th class="songtitle">Talking to the Moon</th>
+                                            <th class="data">1,146,572,803</th>
+                                            <th class="duration">3:37</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">8</th>
+                                            <th class="songtitle">Liquor Store Blues (feat. Damian Marley)</th>
+                                            <th class="data">145,239,054</th>
+                                            <th class="duration">3:49</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">9</th>
+                                            <th class="songtitle">Count on Me</th>
+                                            <th class="data">582,262,744</th>
+                                            <th class="duration">3:17</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">10</th>
+                                            <th class="songtitle">The Other Side (feat. CeeLo Green and B.o.B)</th>
+                                            <th class="data">68,532,220</th>
+                                            <th class="duration">3:48</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="ujsongs" class="songs2">
+                                    <table id="ujtable">
+                                        <tr>
+                                            <th class="columns">#</th>
+                                            <th class="columns">Title</th>
+                                            <th class="columns">Spotify Streams</th>
+                                            <th class="columns">Duration</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">1</th>
+                                            <th class="songtitle">Young Girls</th>
+                                            <th class="data">215,300,422</th>
+                                            <th class="duration">3:48</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">2</th>
+                                            <th class="songtitle">Locked out of Heaven</th>
+                                            <th class="data">1,632,490,794</th>
+                                            <th class="duration">3:53</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">3</th>
+                                            <th class="songtitle">Gorilla</th>
+                                            <th class="data">220,576,832</th>
+                                            <th class="duration">4:04</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">4</th>
+                                            <th class="songtitle">Treasure</th>
+                                            <th class="data">885,599,109</th>
+                                            <th class="duration">2:58</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">5</th>
+                                            <th class="songtitle">Moonshine</th>
+                                            <th class="data">71,250,810</th>
+                                            <th class="duration">3:48</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">6</th>
+                                            <th class="songtitle">When I Was Your Man</th>
+                                            <th class="data">1,787,147,467</th>
+                                            <th class="duration">3:33</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">7</th>
+                                            <th class="songtitle">Natalie</th>
+                                            <th class="data">88,228,124</th>
+                                            <th class="duration">3:45</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">8</th>
+                                            <th class="songtitle">Show Me</th>
+                                            <th class="data">70,310,949</th>
+                                            <th class="duration">3:27</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">9</th>
+                                            <th class="songtitle">Money Make Her Smile</th>
+                                            <th class="data">48,618,522</th>
+                                            <th class="duration">3:23</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">10</th>
+                                            <th class="songtitle">If I Knew</th>
+                                            <th class="data">131,521,464</th>
+                                            <th class="duration">2:12</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="xxivsongs" class="songs3">
+                                    <table id="xxivtable">
+                                        <tr>
+                                            <th class="columns">#</th>
+                                            <th class="columns">Title</th>
+                                            <th class="columns">Spotify Streams</th>
+                                            <th class="columns">Duration</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">1</th>
+                                            <th class="songtitle">24K Magic</th>
+                                            <th class="data">1,307,485,770</th>
+                                            <th class="duration">3:45</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">2</th>
+                                            <th class="songtitle">Chunky</th>
+                                            <th class="data">296,707,995</th>
+                                            <th class="duration">3:06</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">3</th>
+                                            <th class="songtitle">Perm</th>
+                                            <th class="data">183,654,064</th>
+                                            <th class="duration">3:30</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">4</th>
+                                            <th class="songtitle">That's What I Like</th>
+                                            <th class="data">1,815,697,249</th>
+                                            <th class="duration">3:26</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">5</th>
+                                            <th class="songtitle">Versace on the Floor</th>
+                                            <th class="data">694,268,903</th>
+                                            <th class="duration">4:21</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">6</th>
+                                            <th class="songtitle">Straight up & Down</th>
+                                            <th class="data">148,503,165</th>
+                                            <th class="duration">3:18</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">7</th>
+                                            <th class="songtitle">Calling All My Lovelies</th>
+                                            <th class="data">130,253,280</th>
+                                            <th class="duration">4:10</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">8</th>
+                                            <th class="songtitle">Finesse</th>
+                                            <th class="data">232,914,085</th>
+                                            <th class="duration">3:11</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">9</th>
+                                            <th class="songtitle">Too Good to Say Goodbye</th>
+                                            <th class="data">163,678,684</th>
+                                            <th class="duration">4:41</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="slksongs" class="songs4">
+                                    <table id="slktable">
+                                        <tr>
+                                            <th class="columns">#</th>
+                                            <th class="columns">Title</th>
+                                            <th class="columns">Spotify Streams</th>
+                                            <th class="columns" style="text-align: right;">Duration</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">1</th>
+                                            <th class="songtitle">Silk Sonic Intro</th>
+                                            <th class="data">50,656,511</th>
+                                            <th class="duration">1:03</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">2</th>
+                                            <th class="songtitle">Leave The Door Open</th>
+                                            <th class="data">1,177,126,780</th>
+                                            <th class="duration">4:02</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">3</th>
+                                            <th class="songtitle">Fly As Me</th>
+                                            <th class="data">77,396,035</th>
+                                            <th class="duration">3:39</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">4</th>
+                                            <th class="songtitle">After Last Night (with Tundercat & Bootsy Collins)</th>
+                                            <th class="data">178,137,452</th>
+                                            <th class="duration">4:09</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">5</th>
+                                            <th class="songtitle">Smokin Out The Window</th>
+                                            <th class="data">411,382,310</th>
+                                            <th class="duration">3:17</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">6</th>
+                                            <th class="songtitle">Put On A Smile</th>
+                                            <th class="data">52,481,612</th>
+                                            <th class="duration">4:15</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">7</th>
+                                            <th class="songtitle">777</th>
+                                            <th class="data">49,918,472</th>
+                                            <th class="duration">2:45</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">8</th>
+                                            <th class="songtitle">Skate</th>
+                                            <th class="data">219,790,525</th>
+                                            <th class="duration">5:23</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">9</th>
+                                            <th class="songtitle">Love's Train</th>
+                                            <th class="data">83,947,362</th>
+                                            <th class="duration">5:07</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">10</th>
+                                            <th class="songtitle">Blast Off</th>
+                                            <th class="data">64,096,207</th>
+                                            <th class="duration">4:44</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="extsongs" class="songs5">
+                                    <table id="exttable">
+                                        <tr>
+                                            <th class="columns">#</th>
+                                            <th class="columns">Title(Year)</th>
+                                            <th class="columns">Album</th>
+                                            <th class="columns">Duration</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">1</th>
+                                            <th class="songtitle">Blow (with Chris Stapleton & Bruno Mars) - 2019</th>
+                                            <th class="data">No. 6 Collaborations Project</th>
+                                            <th class="duration">3:29</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">2</th>
+                                            <th class="songtitle">Please Me - 2019</th>
+                                            <th class="data">Single</th>
+                                            <th class="duration">3:20</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">3</th>
+                                            <th class="songtitle">Finesse (Remix); feat. Cardi B - 2018</th>
+                                            <th class="data">Single</th>
+                                            <th class="duration">3:37</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">4</th>
+                                            <th class="songtitle">Wake Up in the Sky - 2018</th>
+                                            <th class="data">Evil Genius</th>
+                                            <th class="duration">3:24</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">5</th>
+                                            <th class="songtitle">Welcome Back - 2014</th>
+                                            <th class="data">Rio 2</th>
+                                            <th class="duration">1:08</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">6</th>
+                                            <th class="songtitle">It Will Rain - 2011</th>
+                                            <th class="data">The Twilight Saga: Breaking Dawn</th>
+                                            <th class="duration">4:15</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">7</th>
+                                            <th class="songtitle">Young, Wild & Free - 2011</th>
+                                            <th class="data">Mac & Devin Go to High School</th>
+                                            <th class="duration">2:45</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">8</th>
+                                            <th class="songtitle">Billionaire - 2010</th>
+                                            <th class="data">Lazarus</th>
+                                            <th class="duration">5:23</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">9</th>
+                                            <th class="songtitle">Somewhere In Brooklyn - 2010</th>
+                                            <th class="data">It's Better If You Don't Understand</th>
+                                            <th class="duration">5:07</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="number">10</th>
+                                            <th class="songtitle">Nothin' on You - 2009</th>
+                                            <th class="data">B.o.B Presents: The Adventures of Bobby Ray</th>
+                                            <th class="duration">4:44</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
