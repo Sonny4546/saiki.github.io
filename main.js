@@ -95,8 +95,11 @@ let right = document.getElementById("next");
 let left = document.getElementById("prev");
 
 let main = document.getElementById("mainwrap");
+let all = document.getElementById("all");
 
 function first() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -108,7 +111,7 @@ function first() {
     setTimeout(() => {  uj.style.animation = "Rightto2nd 0.5s ease-in-out forwards"; }, 250);
     setTimeout(() => {  dwh.style.animation = "Rightto3rd 0.5s ease-in-out forwards"; }, 250);
     setTimeout(() => { al4.style.animation = "slk 0.2s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => { xxivbtn.style.cssText = "display: inline-block;" }, 250);
+    setTimeout(() => { xxivbtn.style.cssText = "display: inline-block;" }, 1000);
     setTimeout(() => { al3.style.animation = "xxiv 0.5s ease-in-out forwards" }, 250);
     right.setAttribute('onclick','second()');
     left.setAttribute('onclick','fifth()');
@@ -145,9 +148,12 @@ function first() {
         transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
         animation: none;`;
     }, 1000);
+    
 }
 
 function fifth() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -160,7 +166,6 @@ function fifth() {
     setTimeout(() => {  dwh.style.animation = "Rightto3rd 0.5s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => { al4.style.animation = "slk 0.2s ease-in-out forwards"; }, 250);
     setTimeout(() => { al3.style.animation = "xxiv 0.5s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => { xxivbtn.style.cssText = "display: none;" }, 250);
     right.setAttribute('onclick','first()');
     setTimeout(() => {right.style.display = "";}, 1000);
     setTimeout(() => {left.style.display = "";}, 1000);
@@ -198,6 +203,8 @@ function fifth() {
 }
 
 function second() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     ext.style.display = "";
     right.style.display = "none";
     left.style.display = "none";
@@ -256,6 +263,8 @@ function second() {
 }
 
 function sixth() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -315,6 +324,8 @@ function sixth() {
 }
 
 function third() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -371,6 +382,8 @@ function third() {
 }
 
 function seventh() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -428,6 +441,8 @@ function seventh() {
 }
 
 function fourth() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -483,6 +498,8 @@ function fourth() {
 }
 
 function eighth() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -539,6 +556,8 @@ function eighth() {
 }
 
 function fifth() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
@@ -589,6 +608,8 @@ function fifth() {
 }
 
 function ninth() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
     left.style.display = "none";
     arrL.style.opacity = "0%";
