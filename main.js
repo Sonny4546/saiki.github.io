@@ -97,7 +97,19 @@ let left = document.getElementById("prev");
 let main = document.getElementById("mainwrap");
 let all = document.getElementById("all");
 
-function first() {
+let slkv = document.getElementById("slkvideo");
+let xxivv = document.getElementById("xxivvideo");
+let ujv = document.getElementById("ujvideo");
+let dwhv = document.getElementById("dwhvideo");
+let extv = document.getElementById("extvideo");
+
+(function() {
+    setTimeout(() => {
+    slkv.style.opacity = "100%";
+    }, 3000); 
+}) ();
+
+function xxivmain() {
     all.style.pointerEvents = "none";
     setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
@@ -106,6 +118,11 @@ function first() {
     arrR.style.opacity = "0%";
     slk.style.animation = "MaintoOut 0.25s ease-in-out forwards";
     ext.style.display = "none";
+    slkv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  xxivv.style.opacity = "100%"; }, 3000);
 
     setTimeout(() => {  xxiv.style.animation = "RighttoMain 0.25s ease-in-out forwards"; }, 250);
     setTimeout(() => {  uj.style.animation = "Rightto2nd 0.5s ease-in-out forwards"; }, 250);
@@ -113,8 +130,8 @@ function first() {
     setTimeout(() => { al4.style.animation = "slk 0.2s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => { xxivbtn.style.cssText = "display: inline-block;" }, 1000);
     setTimeout(() => { al3.style.animation = "xxiv 0.5s ease-in-out forwards" }, 250);
-    right.setAttribute('onclick','second()');
-    left.setAttribute('onclick','fifth()');
+    right.setAttribute('onclick','ujmain()');
+    left.setAttribute('onclick','xxivtoslkmain()');
     setTimeout(() => {right.style.display = "";}, 1000);
     setTimeout(() => {left.style.display = "";}, 1000);
     setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
@@ -148,61 +165,9 @@ function first() {
         transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
         animation: none;`;
     }, 1000);
-    
 }
 
-function fifth() {
-    all.style.pointerEvents = "none";
-    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
-    right.style.display = "none";
-    left.style.display = "none";
-    arrL.style.opacity = "0%";
-    arrR.style.opacity = "0%";
-    setTimeout(() => { slk.style.animation = "MaintoOut 0.25s ease-in-out reverse forwards"; }, 500);
-    ext.style.display = "none";
-
-    setTimeout(() => {  xxiv.style.animation = "RighttoMain 0.25s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => {  uj.style.animation = "Rightto2nd 0.5s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => {  dwh.style.animation = "Rightto3rd 0.5s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => { al4.style.animation = "slk 0.2s ease-in-out forwards"; }, 250);
-    setTimeout(() => { al3.style.animation = "xxiv 0.5s ease-in-out reverse forwards"; }, 250);
-    right.setAttribute('onclick','first()');
-    setTimeout(() => {right.style.display = "";}, 1000);
-    setTimeout(() => {left.style.display = "";}, 1000);
-    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
-    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
-
-    setTimeout(()=> {
-        slk.style.cssText = `
-        opacity: 100%;
-        filter: blur(0px);
-        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        xxiv.style.cssText = `
-        opacity: 100%;
-        filter: blur(3px);
-        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        uj.style.cssText = `
-        opacity: 50%;
-        filter: blur(6px);
-        transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        dwh.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-}
-
-function second() {
+function ujmain() {
     all.style.pointerEvents = "none";
     setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     ext.style.display = "";
@@ -211,6 +176,11 @@ function second() {
     arrL.style.opacity = "0%";
     arrR.style.opacity = "0%";
     xxiv.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    slkv.style.opacity = "0%";
+    xxivv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  ujv.style.opacity = "100%"; }, 3000);
 
     setTimeout(() => {  uj.style.animation = "RighttoMain 0.25s ease-in-out forwards"; }, 250);
     setTimeout(() => {  dwh.style.animation = "Rightto2nd 0.5s ease-in-out forwards"; }, 250);
@@ -218,8 +188,8 @@ function second() {
     setTimeout(() => { al3.style.animation = "xxiv 0.2s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => { al2.style.animation = "uj 0.5s ease-in-out forwards"; }, 250);
     setTimeout(() => { ujbtn.style.cssText = "display: inline-block;" }, 250);
-    right.setAttribute('onclick','third()');
-    left.setAttribute('onclick','sixth()');
+    right.setAttribute('onclick','dwhmain()');
+    left.setAttribute('onclick','ujtoxxivmain()');
     setTimeout(() => {right.style.display = "";}, 1000);
     setTimeout(() => {left.style.display = "";}, 1000);
     setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
@@ -262,7 +232,311 @@ function second() {
     }, 1000);
 }
 
-function sixth() {
+function dwhmain() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
+    right.style.display = "none";
+    left.style.display = "none";
+    arrL.style.opacity = "0%";
+    arrR.style.opacity = "0%";
+    uj.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    slkv.style.opacity = "0%";
+    xxivv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  dwhv.style.opacity = "100%"; }, 3000);
+
+    setTimeout(() => {  dwh.style.animation = "RighttoMain 0.25s ease-in-out forwards"; }, 250);
+    setTimeout(() => {  ext.style.animation = "Rightto2nd 0.5s ease-in-out forwards"; }, 250);
+    setTimeout(() => { al2.style.animation = "uj 0.2s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => { al1.style.animation = "dwh 0.5s ease-in-out forwards"; }, 250);
+    setTimeout(() => { dwhbtn.style.cssText = "display: inline-block;" }, 250);
+    right.setAttribute('onclick','extmain()');
+    left.setAttribute('onclick','dwhtoujmain()');
+    setTimeout(() => {right.style.display = "";}, 1000);
+    setTimeout(() => {left.style.display = "";}, 1000);
+    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
+    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
+
+    setTimeout(()=> {
+        slk.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        xxiv.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        uj.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        dwh.style.cssText = `
+        opacity: 100%;
+        filter: blur(0px);
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        ext.style.cssText = `
+        opacity: 100%;
+        filter: blur(3px);
+        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+}
+
+function extmain() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
+    right.style.display = "none";
+    left.style.display = "none";
+    arrL.style.opacity = "0%";
+    arrR.style.opacity = "0%";
+    dwh.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    slkv.style.opacity = "0%";
+    xxivv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    setTimeout(() => {  extv.style.opacity = "100%"; }, 3000);
+
+    setTimeout(() => {  ext.style.animation = "RighttoMain 0.25s ease-in-out forwards"; }, 250);
+    setTimeout(() => { al1.style.animation = "uj 0.2s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => { al0.style.animation = "ext 0.5s ease-in-out forwards"; }, 250);
+    setTimeout(() => { extbtn.style.cssText = "display: inline-block;" }, 250);
+    right.setAttribute('onclick','slkmain()');
+    left.setAttribute('onclick','exttodwhmain()');
+    setTimeout(() => {right.style.display = "";}, 1000);
+    setTimeout(() => {left.style.display = "";}, 1000);
+    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
+    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
+
+    setTimeout(()=> {
+        slk.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        xxiv.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        uj.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        dwh.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        ext.style.cssText = `
+        opacity: 100%;
+        filter: blur(0px);
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+}
+
+function slkmain() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
+    right.style.display = "none";
+    left.style.display = "none";
+    arrL.style.opacity = "0%";
+    arrR.style.opacity = "0%";
+    ext.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    xxivv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  slkv.style.opacity = "100%"; }, 3000);
+    setTimeout(() => { xxivbtn.style.cssText = "display: none;" }, 750);
+    setTimeout(() => { ujbtn.style.cssText = "display: none;" }, 750);
+    setTimeout(() => { dwhbtn.style.cssText = "display: none;" }, 750);
+    setTimeout(() => { extbtn.style.cssText = "display: none;" }, 750);
+    setTimeout(() => {
+        ext.style.cssText = `
+        opacity: 0%;
+        transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg)
+        filter: blur(0px);
+        animation: none;`;
+        dwh.style.cssText = `
+        opacity: 0%;
+        transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg)
+        filter: blur(0px);
+        animation: none;`;
+        uj.style.cssText = `
+        opacity: 50%;
+        filter: blur(6px);
+        transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+        xxiv.style.cssText = `
+        opacity: 100%
+        filter: blur(3px);
+        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+        slk.style.cssText = `
+        opacity: 100%;
+        filter: blur(0px);
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+        al0.style.animation = "none";
+        al1.style.animation = "none";
+        al2.style.animation = "none";
+        al3.style.animation = "none";
+        al4.style.animation = "slk 0.5s ease-in-out forwards";
+    }, 500);
+    right.setAttribute('onclick','xxivmain()');
+    left.setAttribute('onclick','slktoextmain()');
+    setTimeout(() => {right.style.display = "";}, 1000);
+    setTimeout(() => {left.style.display = "";}, 1000);
+    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
+    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
+}
+
+function slktoextmain() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
+    right.style.display = "none";
+    left.style.display = "none";
+    arrL.style.opacity = "0%";
+    arrR.style.opacity = "0%";
+    slk.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    xxiv.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    uj.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    dwh.style.animation = "MaintoOut 0.25s ease-in-out forwards";
+    slkv.style.opacity = "0%";
+    xxivv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    setTimeout(() => {  extv.style.opacity = "100%"; }, 3000);
+
+    setTimeout(() => {  ext.style.animation = "MaintoOut 0.25s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => { al1.style.animation = "uj 0.2s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => { al0.style.animation = "ext 0.5s ease-in-out forwards"; }, 250);
+    setTimeout(() => { extbtn.style.cssText = "display: inline-block;" }, 250);
+    right.setAttribute('onclick','slkmain()');
+    left.setAttribute('onclick','exttodwhmain()');
+    setTimeout(() => {right.style.display = "";}, 1000);
+    setTimeout(() => {left.style.display = "";}, 1000);
+    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
+    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
+
+    setTimeout(()=> {
+        slk.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        xxiv.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        uj.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        dwh.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        ext.style.cssText = `
+        opacity: 100%;
+        filter: blur(0px);
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+}
+
+function xxivtoslkmain() {
+    all.style.pointerEvents = "none";
+    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
+    right.style.display = "none";
+    left.style.display = "none";
+    arrL.style.opacity = "0%";
+    arrR.style.opacity = "0%";
+    setTimeout(() => { slk.style.animation = "MaintoOut 0.25s ease-in-out reverse forwards"; }, 500);
+    ext.style.display = "none";
+    xxivv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  slkv.style.opacity = "100%"; }, 3000);
+
+    setTimeout(() => {  xxiv.style.animation = "RighttoMain 0.25s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => {  uj.style.animation = "Rightto2nd 0.5s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => {  dwh.style.animation = "Rightto3rd 0.5s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => { al4.style.animation = "slk 0.2s ease-in-out forwards"; }, 250);
+    setTimeout(() => { al3.style.animation = "xxiv 0.5s ease-in-out reverse forwards"; }, 250);
+    right.setAttribute('onclick','xxivmain()');
+    left.setAttribute('onclick','slktoextmain()');
+    setTimeout(() => {right.style.display = "";}, 1000);
+    setTimeout(() => {left.style.display = "";}, 1000);
+    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
+    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
+
+    setTimeout(()=> {
+        slk.style.cssText = `
+        opacity: 100%;
+        filter: blur(0px);
+        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        xxiv.style.cssText = `
+        opacity: 100%;
+        filter: blur(3px);
+        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        uj.style.cssText = `
+        opacity: 50%;
+        filter: blur(6px);
+        transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+    setTimeout(()=> {
+        dwh.style.cssText = `
+        opacity: 0%;
+        filter: blur(0px);
+        transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg);
+        animation: none;`;
+    }, 1000);
+}
+
+function ujtoxxivmain() {
     all.style.pointerEvents = "none";
     setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
@@ -271,15 +545,21 @@ function sixth() {
     arrR.style.opacity = "0%";
     setTimeout(() => { xxiv.style.animation = "MaintoOut 0.25s ease-in-out reverse forwards"; }, 500);
     setTimeout(() => { ext.style.display = "none"; }, 500);
+    slkv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  xxivv.style.opacity = "100%"; }, 3000);
 
     setTimeout(() => {  uj.style.animation = "RighttoMain 0.25s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => {  dwh.style.animation = "Rightto2nd 0.5s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => {  ext.style.animation = "Rightto3rd 0.5s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => { al3.style.animation = "xxiv 0.2s ease-in-out forwards"; }, 250);
     setTimeout(() => { al2.style.animation = "uj 0.5s ease-in-out reverse forwards"; }, 250);
+    setTimeout(() => { xxivbtn.style.cssText = "display: block;" }, 250);
     setTimeout(() => { ujbtn.style.cssText = "display: none;" }, 250);
-    right.setAttribute('onclick','second()');
-    left.setAttribute('onclick','fifth()');
+    right.setAttribute('onclick','ujmain()');
+    left.setAttribute('onclick','xxivtoslkmain()');
     setTimeout(() => {right.style.display = "";}, 1000);
     setTimeout(() => {left.style.display = "";}, 1000);
     setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
@@ -323,65 +603,7 @@ function sixth() {
     }, 1000);
 }
 
-function third() {
-    all.style.pointerEvents = "none";
-    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
-    right.style.display = "none";
-    left.style.display = "none";
-    arrL.style.opacity = "0%";
-    arrR.style.opacity = "0%";
-    uj.style.animation = "MaintoOut 0.25s ease-in-out forwards";
-
-    setTimeout(() => {  dwh.style.animation = "RighttoMain 0.25s ease-in-out forwards"; }, 250);
-    setTimeout(() => {  ext.style.animation = "Rightto2nd 0.5s ease-in-out forwards"; }, 250);
-    setTimeout(() => { al2.style.animation = "uj 0.2s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => { al1.style.animation = "dwh 0.5s ease-in-out forwards"; }, 250);
-    setTimeout(() => { dwhbtn.style.cssText = "display: inline-block;" }, 250);
-    right.setAttribute('onclick','fourth()');
-    left.setAttribute('onclick','seventh()');
-    setTimeout(() => {right.style.display = "";}, 1000);
-    setTimeout(() => {left.style.display = "";}, 1000);
-    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
-    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
-
-    setTimeout(()=> {
-        slk.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        xxiv.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        uj.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        dwh.style.cssText = `
-        opacity: 100%;
-        filter: blur(0px);
-        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        ext.style.cssText = `
-        opacity: 100%;
-        filter: blur(3px);
-        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-}
-
-function seventh() {
+function dwhtoujmain() {
     all.style.pointerEvents = "none";
     setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
@@ -389,6 +611,11 @@ function seventh() {
     arrL.style.opacity = "0%";
     arrR.style.opacity = "0%";
     setTimeout(() => { uj.style.animation = "MaintoOut 0.25s ease-in-out reverse forwards"; }, 500);
+    slkv.style.opacity = "0%";
+    xxivv.style.opacity = "0%";
+    dwhv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  ujv.style.opacity = "100%"; }, 3000);
 
     setTimeout(() => {  dwh.style.animation = "RighttoMain 0.25s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => {  ext.style.animation = "Rightto2nd 0.5s ease-in-out reverse forwards"; }, 250);
@@ -396,8 +623,8 @@ function seventh() {
     setTimeout(() => { al1.style.animation = "dwh 0.5s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => { ujbtn.style.cssText = "display: inline-block;" }, 250);
     setTimeout(() => { dwhbtn.style.cssText = "none;" }, 250);
-    right.setAttribute('onclick','third()');
-    left.setAttribute('onclick','sixth()');
+    right.setAttribute('onclick','dwhmain()');
+    left.setAttribute('onclick','ujtoxxivmain()');
     setTimeout(() => {right.style.display = "";}, 1000);
     setTimeout(() => {left.style.display = "";}, 1000);
     setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
@@ -440,64 +667,7 @@ function seventh() {
     }, 1000);
 }
 
-function fourth() {
-    all.style.pointerEvents = "none";
-    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
-    right.style.display = "none";
-    left.style.display = "none";
-    arrL.style.opacity = "0%";
-    arrR.style.opacity = "0%";
-    dwh.style.animation = "MaintoOut 0.25s ease-in-out forwards";
-
-    setTimeout(() => {  ext.style.animation = "RighttoMain 0.25s ease-in-out forwards"; }, 250);
-    setTimeout(() => { al1.style.animation = "uj 0.2s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => { al0.style.animation = "ext 0.5s ease-in-out forwards"; }, 250);
-    setTimeout(() => { extbtn.style.cssText = "display: inline-block;" }, 250);
-    right.setAttribute('onclick','fifth()');
-    left.setAttribute('onclick','eighth()');
-    setTimeout(() => {right.style.display = "";}, 1000);
-    setTimeout(() => {left.style.display = "";}, 1000);
-    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
-    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
-
-    setTimeout(()=> {
-        slk.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        xxiv.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        uj.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        dwh.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        ext.style.cssText = `
-        opacity: 100%;
-        filter: blur(0px);
-        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-}
-
-function eighth() {
+function exttodwhmain() {
     all.style.pointerEvents = "none";
     setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
     right.style.display = "none";
@@ -505,14 +675,19 @@ function eighth() {
     arrL.style.opacity = "0%";
     arrR.style.opacity = "0%";
     setTimeout(() => { dwh.style.animation = "MaintoOut 0.25s ease-in-out reverse forwards"; }, 500);
+    slkv.style.opacity = "0%";
+    xxivv.style.opacity = "0%";
+    ujv.style.opacity = "0%";
+    extv.style.opacity = "0%";
+    setTimeout(() => {  dwhv.style.opacity = "100%"; }, 3000);
 
     setTimeout(() => {  ext.style.animation = "RighttoMain 0.25s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => { al1.style.animation = "uj 0.2s ease-in-out forwards"; }, 250);
     setTimeout(() => { al0.style.animation = "ext 0.5s ease-in-out reverse forwards"; }, 250);
     setTimeout(() => { dwhbtn.style.cssText = "display: inline-block;" }, 250);
     setTimeout(() => { extbtn.style.cssText = "none;" }, 250);
-    right.setAttribute('onclick','fourth()');
-    left.setAttribute('onclick','seventh()');
+    right.setAttribute('onclick','extmain()');
+    left.setAttribute('onclick','dwhtoujmain()');
     setTimeout(() => {right.style.display = "";}, 1000);
     setTimeout(() => {left.style.display = "";}, 1000);
     setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
@@ -551,118 +726,6 @@ function eighth() {
         opacity: 100%;
         filter: blur(3px);
         transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-}
-
-function fifth() {
-    all.style.pointerEvents = "none";
-    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
-    right.style.display = "none";
-    left.style.display = "none";
-    arrL.style.opacity = "0%";
-    arrR.style.opacity = "0%";
-    ext.style.animation = "MaintoOut 0.25s ease-in-out forwards";
-    setTimeout(() => { xxivbtn.style.cssText = "display: none;" }, 750);
-    setTimeout(() => { ujbtn.style.cssText = "display: none;" }, 750);
-    setTimeout(() => { dwhbtn.style.cssText = "display: none;" }, 750);
-    setTimeout(() => { extbtn.style.cssText = "display: none;" }, 750);
-    setTimeout(() => {
-        ext.style.cssText = `
-        opacity: 0%;
-        transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg)
-        filter: blur(0px);
-        animation: none;`;
-        dwh.style.cssText = `
-        opacity: 0%;
-        transform: scale(30%) translateY(281px) translateX(1554px) rotateX(4deg) rotateY(346deg) skewY(1deg) skewX(357deg)
-        filter: blur(0px);
-        animation: none;`;
-        uj.style.cssText = `
-        opacity: 50%;
-        filter: blur(6px);
-        transform: scale(40%) translateY(72px) translateX(928px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-        xxiv.style.cssText = `
-        opacity: 100%
-        filter: blur(3px);
-        transform: scale(50%) translateY(-85px) translateX(417px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-        slk.style.cssText = `
-        opacity: 100%;
-        filter: blur(0px);
-        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-        al0.style.animation = "none";
-        al1.style.animation = "none";
-        al2.style.animation = "none";
-        al3.style.animation = "none";
-        al4.style.animation = "slk 0.5s ease-in-out forwards";
-    }, 500);
-    right.setAttribute('onclick','first()');
-    left.setAttribute('onclick','ninth()');
-    setTimeout(() => {right.style.display = "";}, 1000);
-    setTimeout(() => {left.style.display = "";}, 1000);
-    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
-    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
-}
-
-function ninth() {
-    all.style.pointerEvents = "none";
-    setTimeout(() => { all.style.pointerEvents = "auto";}, 1000);
-    right.style.display = "none";
-    left.style.display = "none";
-    arrL.style.opacity = "0%";
-    arrR.style.opacity = "0%";
-    slk.style.animation = "MaintoOut 0.25s ease-in-out forwards";
-    xxiv.style.animation = "MaintoOut 0.25s ease-in-out forwards";
-    uj.style.animation = "MaintoOut 0.25s ease-in-out forwards";
-    dwh.style.animation = "MaintoOut 0.25s ease-in-out forwards";
-
-    setTimeout(() => {  ext.style.animation = "MaintoOut 0.25s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => { al1.style.animation = "uj 0.2s ease-in-out reverse forwards"; }, 250);
-    setTimeout(() => { al0.style.animation = "ext 0.5s ease-in-out forwards"; }, 250);
-    setTimeout(() => { extbtn.style.cssText = "display: inline-block;" }, 250);
-    right.setAttribute('onclick','fifth()');
-    left.setAttribute('onclick','eighth()');
-    setTimeout(() => {right.style.display = "";}, 1000);
-    setTimeout(() => {left.style.display = "";}, 1000);
-    setTimeout(() => {arrL.style.opacity = "100%";}, 1000);
-    setTimeout(() => {arrR.style.opacity = "100%";}, 1000);
-
-    setTimeout(()=> {
-        slk.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        xxiv.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        uj.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        dwh.style.cssText = `
-        opacity: 0%;
-        filter: blur(0px);
-        transform: scale(70%) translateY(-730px) translateX(-1110px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
-        animation: none;`;
-    }, 1000);
-    setTimeout(()=> {
-        ext.style.cssText = `
-        opacity: 100%;
-        filter: blur(0px);
-        transform: scale(60%) translateY(-190px) translateX(-70px) rotateX(5deg) rotateY(345deg) skewY(2deg) skewX(357deg);
         animation: none;`;
     }, 1000);
 }

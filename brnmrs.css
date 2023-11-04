@@ -519,7 +519,7 @@ body::-webkit-scrollbar {
 }
 
 .b {
-    transform: translate(-320px, 0px);
+    transform: translate(-300px, 0px);
     width: 500px;
 }
 
@@ -529,7 +529,7 @@ body::-webkit-scrollbar {
 }
 
 .d {
-    transform: translate(-320px, 0px);
+    transform: translate(-300px, 0px);
     width: 500px;
 }
 
@@ -539,13 +539,141 @@ body::-webkit-scrollbar {
 }
 
 .f {
-    transform: translate(-320px, 0px);
+    transform: translate(-300px, 0px);
     width: 500px;
 }
 
 .g {
     transform: translate(0px, 30px);
     width: 750px;
+}
+
+.circle {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    z-index: 2;
+    transform: scale(.35) translate(1640px, 110px);
+}
+
+.bb {
+    transform: scale(.25) translate(2300px, 1100px);
+}
+
+.cc {
+    transform: scale(.25) translate(2300px, 2900px);
+}
+
+.dd {
+    transform: scale(.25) translate(2300px, 4600px);
+}
+
+.ee {
+    transform: scale(.25) translate(2300px, 6300px);
+}
+
+.ff {
+    transform: scale(.25) translate(2300px, 8300px);
+}
+
+.gg {
+    transform: scale(.35) translate(1640px, 7000px);
+}
+
+.base {
+    position: absolute;
+    width: 1024px;
+    height: 1024px;
+    z-index: 2;
+}
+
+.aaa {
+    transform: scaleY(.42) scaleX(.8) translate(-265px, -252px);
+}
+
+.bbb {
+    transform: scaleY(.42) scaleX(.8) translate(760px, 820px);
+}
+
+.ccc {
+    transform: scaleY(.42) scaleX(.8) translate(-265px, 1857px);
+}
+
+.ddd {
+    transform: scaleY(.42) scaleX(.8) translate(760px, 2850px);
+}
+
+.eee {
+    transform: scaleY(0.62) scaleX(0.8) translate(-265px, 2770px);
+}
+
+.video {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    z-index: 2;
+}
+
+.a1 {
+    transform: scale(0.5) translate(910px, 110px);
+}
+
+.a2 {
+    transform: scale(0.5) translate(-650px, 1000px);
+}
+
+.a3 {
+    transform: scale(0.5) translate(910px, 1850px);
+}
+
+.a4 {
+    transform: scale(0.5) translate(-610px, 2705px);
+}
+
+.a5 {
+    transform: scale(0.5) translate(910px, 3680px);
+}
+
+.bgbase {
+    width: 1024px;
+    height: 512px;
+    position: absolute;
+    z-index: 1;
+}
+
+.b1 {
+    transform: scaleY(0.7) scaleX(0.9) translate(235px, -250px);
+}
+
+.b2 {
+    transform: scaleY(1.2) scaleX(0.9) translate(240px, 2080px);
+}
+
+.shipwrap {
+    position: absolute;
+    z-index: 4;
+}
+
+.rocket {
+    position: sticky;
+    width: 128px;
+    height: 128px;
+    transform: rotate(86deg) translate(0px, -69px);
+}
+
+.stars2 {
+    position: absolute;
+    width: 1024px;
+    height: 1024px;
+    z-index: 1;
+}
+
+.ab {
+    transform: translate(577px, -272px);
+}
+
+.ac {
+    transform: translate(631px, 2312px);
 }
 
 /* Discography */
@@ -612,7 +740,6 @@ body::-webkit-scrollbar {
     box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
-    border-radius: 2vmin;
     border-width: 2px;
     border-color: #000000;
     -webkit-user-drag: none;
@@ -669,6 +796,7 @@ body::-webkit-scrollbar {
     box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 25px -1px rgba(0,0,0,0.75);
+    border-radius: 2vmin;
     overflow: hidden;
 }
 
@@ -783,6 +911,7 @@ body::-webkit-scrollbar {
 
 .shine {
     position: absolute;
+    z-index: 3;
     transform: translate(-971px, 0px) rotate(295deg);
     pointer-events: none;
 }
@@ -863,6 +992,15 @@ td, th {
 #slktable {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
+}
+
+.dsgvid {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    transition: all 1s;
 }
 
 /* Animations */
