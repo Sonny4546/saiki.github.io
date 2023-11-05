@@ -802,6 +802,10 @@ let table2 = document.getElementById("ujtable");
 let table3 = document.getElementById("xxivtable");
 let table4 = document.getElementById("slktable");
 let div = document.getElementById("contdiv");
+let dwhs = document.getElementById("dwhsong");
+let ujs = document.getElementById("ujsong");
+let xxivs = document.getElementById("xxivsong");
+let slks = document.getElementById("slksong");
 
 function enterslk() {
     right.style.display = "none";
@@ -809,6 +813,7 @@ function enterslk() {
     arrL.style.opacity = "0%";
     arrR.style.opacity = "0%";
     slk.style.animation = "enterAlbum 0.5s ease-in-out forwards";
+    slks.style.display = "block";
     slkbtn.style.cssText = "display: none;";
 
     slkbtn.setAttribute('onclick','exitslk()');
@@ -834,6 +839,9 @@ function exitslk() {
     arrL.style.opacity = "100%";
     arrR.style.opacity = "100%";
     slk.style.animation = "enterAlbum 0.5s ease-in-out reverse forwards";
+    slks.style.display = "none";
+    slks.pause();
+    slks.currentTime = 0;
     slkbtn.style.cssText = "display: none;";
 
     slkbtn.setAttribute('onclick','enterslk()');
@@ -859,6 +867,7 @@ function enterxxiv() {
     arrL.style.opacity = "0%";
     arrR.style.opacity = "0%";
     xxiv.style.animation = "enterAlbum 0.5s ease-in-out forwards";
+    xxivs.style.display = "block";
     xxivbtn.style.cssText = "display: none;";
 
     xxivbtn.setAttribute('onclick','exitxxiv()');
@@ -884,6 +893,9 @@ function exitxxiv() {
     arrL.style.opacity = "100%";
     arrR.style.opacity = "100%";
     xxiv.style.animation = "enterAlbum 0.5s ease-in-out reverse forwards";
+    xxivs.style.display = "none";
+    xxivs.pause();
+    xxivs.currentTime = 0;
     xxivbtn.style.cssText = "display: none;";
 
     xxivbtn.setAttribute('onclick','enterxxiv()');
@@ -910,6 +922,7 @@ function enteruj() {
     arrL.style.opacity = "0%";
     arrR.style.opacity = "0%";
     uj.style.animation = "enterAlbum 0.5s ease-in-out forwards";
+    ujs.style.display = "block";
     ujbtn.style.cssText = "display: none;";
 
     ujbtn.setAttribute('onclick','exituj()');
@@ -935,6 +948,9 @@ function exituj() {
     arrL.style.opacity = "100%";
     arrR.style.opacity = "100%";
     uj.style.animation = "enterAlbum 0.5s ease-in-out reverse forwards";
+    ujs.style.display = "none";
+    ujs.pause();
+    ujs.currentTime = 0;
     ujbtn.style.cssText = "display: none;";
 
     ujbtn.setAttribute('onclick','enteruj()');
@@ -960,6 +976,7 @@ function enterdwh() {
     arrL.style.opacity = "0%";
     arrR.style.opacity = "0%";
     dwh.style.animation = "enterAlbum 0.5s ease-in-out forwards";
+    dwhs.style.display = "block";
     dwhbtn.style.cssText = "display: none;";
 
     dwhbtn.setAttribute('onclick','exitdwh()');
@@ -984,6 +1001,9 @@ function exitdwh() {
     arrL.style.opacity = "100%";
     arrR.style.opacity = "100%";
     dwh.style.animation = "enterAlbum 0.5s ease-in-out reverse forwards";
+    dwhs.style.display = "none";
+    dwhs.pause();
+    dwhs.currentTime = 0;
     dwhbtn.style.cssText = "display: none;";
 
     dwhbtn.setAttribute('onclick','enterdwh()');

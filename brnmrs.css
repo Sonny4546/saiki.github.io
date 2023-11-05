@@ -508,6 +508,7 @@ body::-webkit-scrollbar {
     width: 750px;
     text-align: justify;
     animation: fadeIn 2s;
+    user-select: none;
 }
 
 .timeline {
@@ -516,6 +517,8 @@ body::-webkit-scrollbar {
     height: 2515px;
     transform: translate(575px, 115px);
     z-index: 2;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .b {
@@ -553,6 +556,8 @@ body::-webkit-scrollbar {
     width: 256px;
     height: 256px;
     z-index: 2;
+    user-select: none;
+    -webkit-user-drag: none;
     transform: scale(.35) translate(1640px, 110px);
 }
 
@@ -585,6 +590,8 @@ body::-webkit-scrollbar {
     width: 1024px;
     height: 1024px;
     z-index: 2;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .aaa {
@@ -611,7 +618,9 @@ body::-webkit-scrollbar {
     width: 1280px;
     height: 720px;
     position: absolute;
+    border-radius: 2vmin;
     z-index: 2;
+    user-select: none;
 }
 
 .a1 {
@@ -639,6 +648,8 @@ body::-webkit-scrollbar {
     height: 512px;
     position: absolute;
     z-index: 1;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .b1 {
@@ -666,10 +677,12 @@ body::-webkit-scrollbar {
     width: 1024px;
     height: 1024px;
     z-index: 1;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .ab {
-    transform: translate(577px, -272px);
+    transform: translate(577px, -200px);
 }
 
 .ac {
@@ -931,12 +944,32 @@ body::-webkit-scrollbar {
     margin-right: auto;
     margin-bottom: auto;
     width: 60%;
-    transform: translate(0px, 150px) scale(1.6);
+    transform: translate(0px, 220px) scale(1.6);
     letter-spacing: 1pt; 
+}
+
+table {
+    border-spacing: 0px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 td, th {
     padding: 8px;
+}
+
+tr {
+    border-radius: 2vmin;
+}
+
+tr:nth-child(1):hover {
+    background-color: transparent;
+}
+
+tr:hover {
+    color: #000000;
+    background-color: rgba(175, 175, 175, 0.397);
+    border: transparent;
 }
 
 .number {
@@ -971,7 +1004,7 @@ td, th {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
     width: 65%;
-    transform: translate(0px, 150px) scale(1.4);
+    transform: translate(0px, 200px) scale(1.4);
 }
 
 #dwhtable {
@@ -991,7 +1024,7 @@ td, th {
 
 #slktable {
     display: none;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: table 2s ease-in-out;
 }
 
 .dsgvid {
@@ -1001,6 +1034,84 @@ td, th {
     height: 100%;
     opacity: 0%;
     transition: all 1s;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #000000;
+    border-radius: 0px;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    color: #fff;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: #ca975f;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #ac8052;
+    border-radius: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.songs {
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    transform: translate(335px, 55px);
+    display: none;
+}
+
+.songplay {
+    transform: translate(120px, -20px);
+}
+
+.pauseplay {
+    position: absolute;
+    z-index: 5;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.icons {
+    position: absolute;
+    z-index: 4;
+    width: 64px;
+    height: 64px;
+}
+
+.albumpreview {
+    position: absolute;
+    text-align: left;
+    font-size: 50px;
+    color: #ca975f;
+    font-family: 'Bebas Neue Pro Bold';
+    transform: translate(50px, 50px);
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Animations */
