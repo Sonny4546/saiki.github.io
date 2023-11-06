@@ -1023,6 +1023,8 @@ function exitdwh() {
     }, 750);
 }
 
+let al = document.getElementById("alpre");
+
 function enterext() {
     right.style.display = "none";
     left.style.display = "none";
@@ -1030,6 +1032,7 @@ function enterext() {
     arrR.style.opacity = "0%";
     ext.style.animation = "enterAlbum 0.5s ease-in-out forwards";
     extbtn.style.cssText = "display: none;";
+    al.style.display = "none";
 
     extbtn.setAttribute('onclick','exitext()');
     div.style.height = "1518px";
@@ -1053,6 +1056,7 @@ function exitext() {
     arrR.style.opacity = "100%";
     ext.style.animation = "enterAlbum 0.5s ease-in-out reverse forwards";
     extbtn.style.cssText = "display: none;";
+    setTimeout(() => {al.style.display = "";}, 2000);
 
     extbtn.setAttribute('onclick','enterext()');
     setTimeout(() => {  div.style.height = "759px"; }, 1000);
